@@ -13,19 +13,27 @@
 <body>  
 <!-------------------------------BARRA DE MENU------------------------------------------------>
 <header>  
-    <nav>
-        <div>
+    <nav class="nav flex">
+        <div class="flex align-items-center">
             <button class="logo"><img src="img/logo.png"></button> 
+        
+            <ul class="menu flex align-items-center active" >
+                <li class="menu__item"><a href="#">Productos</a></li>
+                <li class="menu__item"><a href="#">Favoritos</a></li>
+                <li class="menu__item"><a href="#">Ayuda</a></li>
+            </ul>
         </div>
-        <input type="checkbox" id="check">
-        <label for="check" class="bar-btn"><img src="img/icons/menu.png" alt="#"></label>
-                <ul class="nav-menu active" >
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Favoritos</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                </ul>
+        <div>
+            <ul class= "menu flex align-items-center">
+                <li class="menu__item">
+                    <a href=""><img src="img/icons/shopping_cart.png"/></a>
+                </li>
+                <li class="menu__item">
+                    <button><img src="img/login.png"/></button>
+                </li>
+            </ul>
+        </div>
     </nav>
-
 </header>
 
 
