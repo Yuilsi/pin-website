@@ -110,19 +110,19 @@ header {
 }
 
 /*----------CAROUSEL-------------------*/
-#conteItemsCarrusel {
+#containerItemsCarousel {
    
     height: 200px;
     overflow: hidden;
        /*todo lo que este por fuera lo recorta*/
 }
 
-.itemCarrusel {
+.carousel__item {
     height: 100%;
     position: relative;
 
 }
-.tarjetaCarrusel {
+.items__card {
     height: 100%;
     width: 100%;
 }
@@ -136,13 +136,13 @@ header {
     width: 100%;
     
 }
-#tarjetaCarrusel-1 {
+#card-1 {
     background-color: aquamarine;
 }
-#tarjetaCarrusel-2 {
+#card-2 {
     background-color: rgb(68, 7, 78);
 }
-#tarjetaCarrusel-3 {
+#card-3 {
     background-color: rgb(255, 214, 127);
 }
 #contePuntos {
