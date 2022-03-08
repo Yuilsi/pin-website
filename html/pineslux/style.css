@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap");
+
 
 
 
@@ -95,16 +95,18 @@ header {
 }
 .welcome__title{
   color: #F64D33;
+  font-size:2.5em;
 }
 .welcome__paragraph {
-    margin: 1em auto 2em;
-    font-style: regular;
+    margin: 1em auto 3em;
+
     color: #fff;
 }
 .welcome__button {
-    
-    color: #fff;
-    padding: 15px;
+    font-size:1em;
+    color: rgb(255, 255, 255);
+    padding: 18px;
     background-color: #F64D33;
+    
     
 }
