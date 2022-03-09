@@ -187,30 +187,37 @@ font-weight: 600;
     }
 
 /*----------fooder-----------*/
-.links {
-    display: flex;
-    justify-content: space-between;
+.elements {
+   display: flex;
+   justify-content: space-between;
    margin-left: 50px;
    margin-right: 50px;
+    
 }
-.links__column {
+.elements__column {
+    margin-top: 20px;
     width: 30%;
 }
 
-.links__column span {
-    
-    color: rgba(255, 255, 255, 0.582);
+.elements__tittle {
+margin-top: 20px;
+padding: 10px 0;
+font-weight: 300;
+}
+.elements__column span {
+    color: rgba(255, 255, 255, 0.829);
     font-size: 1.3em;
+    
 }
-.links__column a {
-    margin-top: 5px;
+.elements__column a {
+    margin-top: 30px;
+    padding: 20px 0;
     color: rgba(255, 255, 255, 0.514);
-    font-weight: 400;
+    font-weight: 200;
+    font-size: 13px;
 }
 
-.description {
-    color: #fff;
+.elements__box {
+    margin-top: 20px;
 }
-
-
 
