@@ -6,6 +6,7 @@
    /* text-decoration:none;
     list-style:none; */
      box-sizing: border-box;
+    
 }
 
 ul {
@@ -26,7 +27,12 @@ h2 {
     color: #F64D33;
     font-size: 1.3em;
   }
-  
+
+h3 {
+    color: #F64D33;
+    font-weight: 500;
+}
+
 p {
     margin: 1em auto 3.5em;
     font-weight: 400;
@@ -41,7 +47,9 @@ p {
     align-items: center;
 }
 
-
+body {
+    background-color: #010A13;
+}
 /*--------------MENU--------------------*/
 header {
     width: 100%;
@@ -105,36 +113,30 @@ header {
     background-color: #F64D33;
 }
 
-/*----------CAROUSEL-------------------*/
+/*----------gallery-------------------*/
 
-.carousel {
-    background-color: #010A13;   
-    
-}
-.carousel_tittle { 
+.gallery__tittle { 
    padding:  30px 50px 5px;
-    text-align: center;
+   text-align: center;
 }
-#containerItemsCarousel {
+#containerItemsgallery {
     margin-top: 20px;
     height: 250px;
     overflow: hidden;
        /*todo lo que este por fuera lo recorta*/
 }
 
-.carousel__item {
+.gallery__item {
     height: 100%;
     position: relative;
 
 }
 .items__card {
   padding-left: 60px;
-  padding-right: 60px;
-    
     height: 100%;
     width: 100%;
 }
-.carousel__icons {
+.gallery__icons {
     position:absolute;
     top:0;
     display: flex;
@@ -144,16 +146,6 @@ header {
     width: 100%;
     
 }
-#card-1 {
-    background-color: #010A13;
-}
-#card-2 {
-    background-color: #010A13;
-}
-#card-3 {
-    background-color: #010A13;
-}
-
 
 #points {
     background-color: #010A13;
@@ -165,3 +157,34 @@ header {
     font-style: none;
     padding: 3px;
 }
+
+/*----------section 3-----------*/
+.qualities {
+    margin-top: 20px;
+    padding: 20px 50px;
+    
+}
+.quality {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.quality__column {
+    width: 30%;
+}
+
+.quality__image {
+    width: 100%;
+}
+.quality__title {
+margin: 20px 0 15px 0;
+font-weight: 600;
+
+}
+.quality__paragraph {
+    font-weight: 400;
+    }
+
+
+
