@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PinesLuz</title>
+    <title>Document</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-    
+
 </head>
-<body>  
-<!-------------------------------BARRA DE MENU------------------------------------------------>
-<header>  
-    <nav class="nav flex">
-        <div class="flex align-items-center">
-            <button class="logo"><img src="img/logo.png"></button> 
-        
-            <ul class="menu flex align-items-center active" >
-                <li class="menu__item"><a href="#">Productos</a></li>
-                <li class="menu__item"><a href="#">Favoritos</a></li>
-                <li class="menu__item"><a href="#">Ayuda</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul class= "menu flex align-items-center">
+<body>
+    <!---------------------MENU----------------->
+    <header>
+        <nav class="nav flex">
+            <div class="flex align-items-center">
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <ul class= "menu flex align-items-center">
+                    <li class="menu__item">
+                      <a href="#">Productos</a>  
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">Favoritos</a> 
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">Ayuda</a>
+                    </li>
+                </ul>
+            </div>
+             <ul class= "menu flex align-items-center">
                 <li class="menu__item">
                     <button><img src="img/icons/loupe.png"/></button>
                 </li>
@@ -41,76 +44,79 @@
                     <button><img src="img/login.png"/></button>
                 </li>
             </ul>
-        </div>
-    </nav>
-
-</header>
-<!---Banner--->
-<section class="banner">
-    <div>
-        
-    </div>
-        <div class="welcome">
-            <h1 class="welcome__title">Encuentra tu pin ideal</h1>
-            <p class="welcome__paragraph">Atrévete a cambiar de estilo con nuestro nuevos pines personalizados, solo dinos tu ideal y nosotros nos encargamos de hacerlo real.</p>
-            <a href="" class="welcome__button">Comprar ahora</a>
-        </div>
-   
-<img src="img/backgroundnav.png" alt="" class="banner__background">
-</section>
-
-<!---carouse 1--->
-<section>
-
-<div class= "carousel"id="containerItemsCarousel">        <!---class="itemcarousel"  por carousel__item--->
-    <div class="carousel__item" id="itemcarousel-1">
-        <div class="items__card" id="card-1">
-            A</div>
-            <div class="flechasCarrusel">
-                <a href="#itemcarousel-3">
-                        <img src="img/icons/icon_previous.png" alt="">
+        </nav>
+    </header>
+    <!---------------------BANNER----------------->
+    <section class="banner">
+            <div class="banner__elements">
+                <h1>Encuentra tu pin ideal</h1>
+                <p>Atrévete a cambiar de estilo con nuestro nuevos pines personalizados, solo dinos tu ideal y nosotros nos encargamos de hacerlo real.</p>
+                <a href="#">Comprar ahora</a>
+            </div>
+       
+    <img src="img/background.png" alt="" class="banner__background">
+    </section>
+    <!---------------------CAROUSEL----------------->
+    <section class="carousel">
+        <div>
+            <h2 class="carousel_tittle">Encuentra tu pin ideal</h2>
+            </div>
+        <div class= "carousel__container"id="containerItemsCarousel">        <!---class="itemcarousel"  por carousel__item--->
+            <div class="carousel__item" id="itemcarousel-1">
+                <div class="items__card" id="card-1">
+                    <img src="img/gallery/first_img.png" alt="">
+                    
+                </div>
+                
+                    <div class="carousel__icons">
+                        <a href="#itemcarousel-3">
+                                <img src="img/icons/icon_previous.png" alt="">
+                                </a>
+                        <a href="#itemcarousel-2">
+                            <img src="img/icons/icon_next.png" alt="">
                         </a>
-                <a href="#itemcarousel-2">
-                    <img src="img/icons/icon_next.png" alt="">
-                </a>
-        </div> 
-    </div>
-    <div class="carousel__item" id="itemcarousel-2">
-        <div class="items__card" id="card-2"> 
-            B</div>
-            <div class="flechasCarrusel">
-                <a href="#itemcarousel-1">
-                    <img src="img/icons/icon_previous.png" alt="">
-                </a>
-                <a href="#itemcarousel-3">
-                     <img src="img/icons/icon_next.png" alt="">
-                </a>
-        </div> 
-    </div>
-    <div class="carousel__item" id="itemcarousel-3">
-        <div class="items__card" id="card-3">
-            C</div>
-            <div class="flechasCarrusel">
-                <a href="#itemcarousel-2">
-                    <img src="img/icons/icon_previous.png" alt="">
-                </a>
-                <a href="#itemcarousel-1">
-                    <img src="img/icons/icon_next.png" alt="">
-                </a>
-        </div> 
-    </div>
-</div>
-<div id="contePuntos">
-    <a href="#itemcarousel-1"><img src="img/icons/points/gray_point.png" alt=""></a>
-    <a href="#itemcarousel-2"><img src="img/icons/points/gray_point.png" alt=""></a>
-    <a href="#itemcarousel-3"><img src="img/icons/points/gray_point.png" alt=""></a>
-</div>
-</section>
+                </div> 
+            </div>
+            <div class="carousel__item" id="itemcarousel-2">
+                <div class="items__card" id="card-2"> 
+                    <img src="img/gallery/second_img.png" alt=""></div>
+                    <div class="carousel__icons">
+                        <a href="#itemcarousel-1">
+                            <img src="img/icons/icon_previous.png" alt="">
+                        </a>
+                        <a href="#itemcarousel-3">
+                             <img src="img/icons/icon_next.png" alt="">
+                        </a>
+                </div> 
+            </div>
+            <div class="carousel__item" id="itemcarousel-3">
+                <div class="items__card" id="card-3">
+                    <img src="img/gallery/three_img.png" alt=""></div>
+                    <div class="carousel__icons">
+                        <a href="#itemcarousel-2">
+                            <img src="img/icons/icon_previous.png" alt="">
+                        </a>
+                        <a href="#itemcarousel-1">
+                            <img src="img/icons/icon_next.png" alt="">
+                        </a>
+                </div> 
+            </div>
+        </div>
+    
 
+    <!-------point slider buttons------>
 
+        <div id="points">
+            <a href="#itemcarousel-1"><img src="img/icons/points/gray_point.png" alt=""></a>
+            <a href="#itemcarousel-2"><img src="img/icons/points/gray_point.png" alt=""></a>
+            <a href="#itemcarousel-3"><img src="img/icons/points/gray_point.png" alt=""></a>
+        </div>
+      
+        </section>
 
 
 
 </body>
-</html>
 
+
+</html>
