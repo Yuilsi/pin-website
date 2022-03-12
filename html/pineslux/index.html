@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="mediaqueris.css">
 
 </head>
 <body>
@@ -21,7 +22,9 @@
                 <a href="#" class="logo">
                     <img src="img/logo.png" alt="">
                 </a>
-                <ul class= "menu flex align-items-center">
+                <input type="checkbox" id="check">
+        <label for="check" class="bar-btn"><img src="img/icons/menu.png" alt="#"></label>
+                <ul class= "menu flex align-items-center active">
                     <li class="menu__item">
                       <a href="#">Productos</a>  
                     </li>
@@ -110,22 +113,22 @@
       
         </section>
     <!-------------------Pin Qualities--------------->
-    <section class="
-    qualities">
+    <section class="qualities">
         <h2>¿Por qué deberias comprar nuestros pines?</h2>
         <div class="quality">
-        <div class="quality__column"><img src="img/section of three parts/passion.png" alt="" class="quality__image">
+        <div class="quality__column">
+            <img class="quality__image" src="img/section of three parts/passion.png" alt="">
             <h3 class="quality__title">Nuestros Pines inspiran placer</h3>
             <p class="quality__paragraph">No solo ofrecemos pines, te brindamos emoción, diversión y un nuevo tema todos los días para que te rías con tus amigos.
             </p>
         </div>
         <div class="quality__column">
-            <img src="img/section of three parts/quality.png" alt="" class="quality__image">
+            <img class="quality__image" src="img/section of three parts/quality.png" alt="">
             <h3 class="quality__title">Te brindamos calidad</h3>
             <p  class="quality__paragraph">Trabajamos con más 100+ de los mejores diseñadores de pines estilo gothic y personajes animados de animales.Además son fáciles de adherir a cualquier tipo de ropa y morrales.</p>
         </div>
         <div class="quality__column">
-            <img src="img/section of three parts/designs.png" alt="" class="quality__image">
+            <img class="quality__image" src="img/section of three parts/designs.png" alt="">
             <h3 class="quality__title">Diseños personalizados </h3>
             <p  class="quality__paragraph">Nuestra empresa te brinda un servicio VIP, si tienes ideas o sueños, los hacemos realidad.Además si eres uno de esos nuevos diseñadores innatos crreeme que no te dejaremos escapar.
             </p>
@@ -137,14 +140,16 @@
 
     <footer>
         <div class="elements">
-            <ul class= "elements__column">
+            <ul class="elements__column">
                 <li><a href="#"></a><img src="img/footer/logo.png" alt="" ></li>
                 <li><img src="img/footer/location.png" alt=""><a href="#">Cali, Palmira</a></li>
                 <li><img src="img/footer/phone.png" alt=""><a href="#">+1800 356 4455</a></li>
                 <li>www.pinesLux.com</li>
             </ul>
             <ul class= "elements__column">
-                <li class="elements__tittle"><span>Menu</span></li>
+                <li class="elements__tittle">
+                    <span>Menu</span>
+                </li>
                 <li><a href="#">Productos</a></li>
                 <li><a href="#">Favoritos</a></li>
                 <li><a href="#">Ayuda</a></li>
@@ -152,21 +157,25 @@
                 </li>
             </ul>
             <ul class= "elements__column">
-                <li class="elements__tittle"><span>Cuenta</span></li>
+                <li class="elements__tittle">
+                    <span>Cuenta</span>
+                </li>
                 <li><a href="#">Mi cuenta</a></li>
                 <li><a href="#">Tus pedidos</a></li>
                 <li><a href="#">Tarifas de envío </a></li>
             </ul>
             <ul class= "elements__column">
-                <li class="elements__tittle"><span>Redes</span></li>
+                <li class="elements__tittle">
+                    <span>Redes</span>
+                </li>
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">Instagram</a></li>
                 <li><a href="#">Twitter</a></li>
 
             </ul>
             <ul class= "elements__column">
-                <li><span>Suscríbete</span class="elements__tittle"></li>
-                <li><img src="img/footer/subscribe.png" alt="" class= "elements__box"></li>
+                <li class="elements__tittle"><span>Suscríbete</span></li>
+                <li><img src="img/footer/subscribe.png" alt="" class="elements__box"></li>
             </ul>
         </div>
 

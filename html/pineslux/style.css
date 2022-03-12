@@ -2,12 +2,15 @@
     font-family: 'Karla', sans-serif;
     padding: 0;
     margin: 0;
-    
    /* text-decoration:none;
     list-style:none; */
      box-sizing: border-box;
     
-}
+    }
+    html,body {
+       font-family: karla;
+        
+    }
 
 ul {
     list-style: none;
@@ -62,11 +65,15 @@ header {
 }
 .nav {
     margin: 0 5px;
-    
     justify-content: space-between;
 }
 .logo {
     margin-right: 20px;
+}
+
+.bar-btn{
+    margin-right: 20px;
+    cursor: pointer;
 }
 .menu__item {
     margin: 0 20px;   /*arriba y a los lados*/   
@@ -82,6 +89,19 @@ header {
 .menu__item a .active, .menu__item a:hover {
     color: rgb(233, 76, 3);
     transition: .3s;
+
+}
+
+#check {
+    display:none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 100wh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
 }
 /*-----------BANNER----------------*/
 .banner {
@@ -161,7 +181,7 @@ header {
 /*----------section 3-----------*/
 .qualities {
     margin-top: 20px;
-    padding: 20px 50px;
+    padding:  50px;
     
 }
 .quality {
@@ -192,6 +212,7 @@ font-weight: 600;
    justify-content: space-between;
    margin-left: 50px;
    margin-right: 50px;
+   
     
 }
 .elements__column {
@@ -200,15 +221,11 @@ font-weight: 600;
 }
 
 .elements__tittle {
-margin-top: 20px;
 padding: 10px 0;
 font-weight: 300;
+color: #fff;
 }
-.elements__column span {
-    color: rgba(255, 255, 255, 0.829);
-    font-size: 1.3em;
-    
-}
+  
 .elements__column a {
     margin-top: 30px;
     padding: 20px 0;
@@ -218,6 +235,6 @@ font-weight: 300;
 }
 
 .elements__box {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
