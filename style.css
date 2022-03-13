@@ -1,0 +1,264 @@
+*{
+    font-family: 'Karla', sans-serif;
+    padding: 0;
+    margin: 0;
+   /* text-decoration:none;
+    list-style:none; */
+     box-sizing: border-box;
+    
+    }
+    html,body {
+       font-family: karla;
+        
+    }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 800;
+    color: #F64D33;
+    font-size: 3em;
+}
+h2 {
+    font-weight: 800;
+    color: #F64D33;
+    font-size: 1.3em;
+  }
+
+h3 {
+    color: #F64D33;
+    font-weight: 500;
+}
+
+p {
+    margin: 1em auto 3.5em;
+    font-weight: 400;
+    color: #fff;
+    font-size: 1em;
+  }
+
+.flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+
+body {
+    background-color: #010A13;
+}
+/*--------------MENU--------------------*/
+header {
+    width: 100%;
+    height: 74px;
+    position: absolute;
+    z-index: 4;
+    padding: 10px;
+    color: aliceblue;
+    
+}
+.nav {
+    margin: 0 5px;
+    justify-content: space-between;
+}
+.logo {
+    margin-right: 20px;
+}
+
+.bar-btn{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.menu__item {
+    margin: 0 20px;   /*arriba y a los lados*/   
+}
+.menu__item a {
+    color:#fff;
+}
+.menu__item button {
+    background-color: transparent;
+    border: none;
+}
+
+.menu__item a .active, .menu__item a:hover {
+    color: rgb(233, 76, 3);
+    transition: .3s;
+
+}
+
+#check {
+    display:none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 100wh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+/*-----------BANNER----------------*/
+.banner {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+.banner__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /*adapta la imagen*/
+}
+.banner__elements {
+    margin-top: 2em;
+    margin-left: 23px;
+    width: 450px;
+    
+    background-color: 
+    transparent;
+    padding: 50px;
+    position: absolute;  /*el contenido se sobrepone a la pagina*/
+    top: 50%;
+    transform: translateY(-50%);
+}
+.banner__elements a {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    padding: 18px 100px;
+    background-color: #F64D33;
+}
+
+/*----------gallery-------------------*/
+
+
+
+/*----------section 3-----------*/
+.qualities {
+    margin-top: 20px;
+    padding:  50px;
+    
+}
+.quality {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.quality__column {
+    width: 30%;
+}
+
+.quality__image {
+    width: 100%;
+}
+.quality__paragraph {
+    font-weight: 400;
+}
+
+/* --- --- CAROUSEL --- --- */
+
+.container {
+    max-width: 1200px;
+	width: 90%;
+	margin: auto;
+}
+
+.container__tittle { 
+    margin-bottom: 20px;
+    padding:  30px 50px 5px;
+    text-align: center;
+ }
+.carousel__container {
+	position: relative;
+}
+
+.carousel__prev, .carousel__next {
+	position: absolute;
+    z-index: 5;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 12px);     /*alineación de botones verticalmente*/
+	line-height: 30px;
+    color: #F64D33;
+    opacity: 40%;
+	cursor: pointer;
+	background: none;	
+}
+.carousel__prev:hover, .carousel__next:hover {
+	opacity: 100%;
+}
+/*Desplazamiento de botones a los extremos*/
+.carousel__prev {
+	left: -30px;
+}
+.carousel__next {
+	right: -30px;
+}
+
+.carousel__list {
+	overflow: hidden;  
+
+}
+
+.carousel__item {
+    margin: 5px;
+	text-align: center;
+}
+/* puntos de la parte inferiro del carrusel*/
+.carousel__arrows .glider-dot {
+	display: block;
+	width: 5px;
+	height: 5px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 60;
+}
+
+.carousel__arrows .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+
+/*----------fooder-----------*/
+.elements {
+   display: flex;
+   justify-content: space-between;
+   margin-left: 50px;
+   margin-right: 50px;
+   
+    
+}
+.elements__column {
+    margin-top: 20px;
+    width: 30%;
+}
+
+.elements__tittle {
+padding: 10px 0;
+font-weight: 300;
+color: #fff;
+}
+  
+.elements__column a {
+    margin-top: 30px;
+    padding: 20px 0;
+    color: rgba(255, 255, 255, 0.514);
+    font-weight: 200;
+    font-size: 13px;
+}
+
+.elements__box {
+    margin-top: 5px;
+}
+
