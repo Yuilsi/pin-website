@@ -135,48 +135,7 @@ header {
 
 /*----------gallery-------------------*/
 
-.gallery__tittle { 
-   padding:  30px 50px 5px;
-   text-align: center;
-}
-#containerItemsgallery {
-    margin-top: 20px;
-    height: 250px;
-    overflow: hidden;
-       /*todo lo que este por fuera lo recorta*/
-}
 
-.gallery__item {
-    height: 100%;
-    position: relative;
-
-}
-.items__card {
-  padding-left: 60px;
-    height: 100%;
-    width: 100%;
-}
-.gallery__icons {
-    position:absolute;
-    top:0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    
-}
-
-#points {
-    background-color: #010A13;
-    display: flex;
-    justify-content: center;
-    
-}
-#points > a {
-    font-style: none;
-    padding: 3px;
-}
 
 /*----------section 3-----------*/
 .qualities {
@@ -197,14 +156,79 @@ header {
 .quality__image {
     width: 100%;
 }
-.quality__title {
-margin: 20px 0 15px 0;
-font-weight: 600;
-
-}
 .quality__paragraph {
     font-weight: 400;
-    }
+}
+
+/* --- --- CAROUSEL --- --- */
+
+.container {
+    max-width: 1200px;
+	width: 90%;
+	margin: auto;
+}
+
+.container__tittle { 
+    margin-bottom: 20px;
+    padding:  30px 50px 5px;
+    text-align: center;
+ }
+.carousel__container {
+	position: relative;
+}
+
+.carousel__prev, .carousel__next {
+	position: absolute;
+    z-index: 5;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 12px);     /*alineación de botones verticalmente*/
+	line-height: 30px;
+    color: #F64D33;
+    opacity: 40%;
+	cursor: pointer;
+	background: none;	
+}
+.carousel__prev:hover, .carousel__next:hover {
+	opacity: 100%;
+}
+/*Desplazamiento de botones a los extremos*/
+.carousel__prev {
+	left: -30px;
+}
+.carousel__next {
+	right: -30px;
+}
+
+.carousel__list {
+	overflow: hidden;  
+
+}
+
+.carousel__item {
+    margin: 5px;
+	text-align: center;
+}
+/* puntos de la parte inferiro del carrusel*/
+.carousel__arrows .glider-dot {
+	display: block;
+	width: 5px;
+	height: 5px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 60;
+}
+
+.carousel__arrows .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
 
 /*----------fooder-----------*/
 .elements {

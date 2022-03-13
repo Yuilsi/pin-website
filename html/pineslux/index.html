@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>pines Lux</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <!------------------libreria----------------------------->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="mediaqueris.css">
@@ -52,66 +56,70 @@
     <!---------------------BANNER---------------------------->
     <section class="banner">
             <div class="banner__elements">
-                <h1>Encuentra tu pin ideal</h1>
-                <p>Atrévete a cambiar de estilo con nuestro nuevos pines personalizados, solo dinos tu ideal y nosotros nos encargamos de hacerlo real.</p>
+                <h1 class="banner__title">Encuentra tu pin ideal</h1>
+                <p class="banner__paragraph">Atrévete a cambiar de estilo con nuestro nuevos pines personalizados, solo dinos tu ideal y nosotros nos encargamos de hacerlo real.</p>
                 <a href="#">Comprar ahora</a>
-            </div>
-       
+            </div> 
     <img src="img/background.png" alt="" class="banner__background">
     </section>
-    <!---------------------gallery/GALLERY----------------->
-    <section class="gallery">
-        <h2 class="gallery__tittle">Encuentra tu pin ideal</h2>
-        <div class= "gallery__container"id="containerItemsgallery">        
-            <div class="gallery__item" id="itemgallery-1">
-                <div class="items__card" id="card-1">
-                    <img src="img/gallery/first_img.png" alt="">  
-                </div>
-                    <div class="gallery__icons">
-                        <a href="#itemgallery-3">
-                                <img src="img/icons/icon_previous.png" alt="">
-                                </a>
-                        <a href="#itemgallery-2">
-                            <img src="img/icons/icon_next.png" alt="">
-                        </a>
-                </div> 
-            </div>
-            <div class="gallery__item" id="itemgallery-2">
-                <div class="items__card" id="card-2"> 
-                    <img src="img/gallery/second_img.png" alt=""></div>
-                    <div class="gallery__icons">
-                        <a href="#itemgallery-1">
-                            <img src="img/icons/icon_previous.png" alt="">
-                        </a>
-                        <a href="#itemgallery-3">
-                             <img src="img/icons/icon_next.png" alt="">
-                        </a>
-                </div> 
-            </div>
-            <div class="gallery__item" id="itemgallery-3">
-                <div class="items__card" id="card-3">
-                    <img src="img/gallery/three_img.png" alt=""></div>
-                    <div class="gallery__icons">
-                        <a href="#itemgallery-2">
-                            <img src="img/icons/icon_previous.png" alt="">
-                        </a>
-                        <a href="#itemgallery-1">
-                            <img src="img/icons/icon_next.png" alt="">
-                        </a>
-                </div> 
-            </div>
-        </div>
+    <!--------------------container----------------->
+    <section class="container">
+    </section>
+
+    <!-----------------CAROUSEL 2---------------> 
     
+    <div class="container">
+        <h2 class="container__tittle">Nuestros productos</h2>
+		<div class="carousel">
+			<div class="carousel__container">
+				<button aria-label="prev" class="carousel__prev">
+					<i class="fas fa-chevron-left"></i>
+				</button>
+				<div class="carousel__list">
+					<div class="carousel__item">
+						<img src="img/products/1.png" alt="#">
+					</div>
+					<div class="carousel__item">
+						<img src="img/products/2.png" alt="#">
+					</div>
+					<div class="carousel__item">
+						<img src="img/products/3.png" alt="#">
+					</div>
+					<div class="carousel__item">
+						<img src="img/products/4.png" alt="#">
+					</div>
+					<div class="carousel__item">
+						<img src="img/products/5.png" alt="#">
+					</div>
+					<div class="carousel__item">
+						<img src="img/products/6.png" alt="#">
+					</div>
+					<div class="carousel__item">
+						<img src="img/products/7.png" alt="#">
+					</div>
+					<div class="carousel__item">
+						<img src="img/products/8.png" alt="#">
+					</div>
+                    <div class="carousel__item">
+						<img src="img/products/9.png" alt="#">
+					</div>
+                    <div class="carousel__item">
+						<img src="img/products/10.png" alt="#">
+					</div>  
+				</div>
 
-    <!-------point slider buttons------>
+				<button aria-label="next" class="carousel__next">
+					<i class="fas fa-chevron-right"></i>
+				</button>
+			</div>
 
-        <div id="points">
-            <a href="#itemgallery-1"><img src="img/icons/points/gray_point.png" alt="#"></a>
-            <a href="#itemgallery-2"><img src="img/icons/points/gray_point.png" alt="#"></a>
-            <a href="#itemgallery-3"><img src="img/icons/points/gray_point.png" alt="#"></a>
-        </div>
-      
-        </section>
+			<div role="tablist" class="carousel__arrows"></div>
+		</div>
+	</div>
+
+	
+
+
     <!-------------------Pin Qualities--------------->
     <section class="qualities">
         <h2>¿Por qué deberias comprar nuestros pines?</h2>
@@ -180,6 +188,9 @@
         </div>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
 </body>
 
 
