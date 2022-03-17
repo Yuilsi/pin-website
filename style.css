@@ -68,41 +68,41 @@ header {
     justify-content: space-between;
 }
 .logo {
-    margin-right: 20px;
-}
-
-.bar-btn{
-    margin-right: 20px;
-    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-right: 10px;
 }
 .menu__item {
-    margin: 0 20px;   /*arriba y a los lados*/   
+    margin: 0px 20px; 
+    margin-top: 18px;  /*arriba y a los lados*/   
 }
 .menu__item a {
     color:#fff;
 }
 .menu__item button {
+margin-right: 30px;
     background-color: transparent;
     border: none;
 }
-
 .menu__item a .active, .menu__item a:hover {
     color: rgb(233, 76, 3);
     transition: .3s;
-
 }
-
-#check {
+.bar-btn{
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
     display:none;
 }
 
-#check:checked ~ .nav-menu {
-    height: 100wh;
+ul.show {
+    top: 65px;
 }
 
-#check:checked ~ .nav-menu li {
-    display: block;
-}
+
+
 /*-----------BANNER----------------*/
 .banner {
     width: 100%;
@@ -133,10 +133,6 @@ header {
     background-color: #F64D33;
 }
 
-/*----------gallery-------------------*/
-
-
-
 /*----------section 3-----------*/
 .qualities {
     margin-top: 20px;
@@ -160,7 +156,7 @@ header {
     font-weight: 400;
 }
 
-/* --- --- CAROUSEL --- --- */
+/* --- --- CAROUSEL/GALLERY --- --- */
 
 .container {
     max-width: 1200px;
@@ -204,7 +200,6 @@ header {
 
 .carousel__list {
 	overflow: hidden;  
-
 }
 
 .carousel__item {
@@ -220,36 +215,30 @@ header {
 	opacity: .2;
 	border-radius: 60;
 }
-
 .carousel__arrows .glider-dot:hover {
 	opacity: .5;
 }
-
 .carousel__indicadores .glider-dot.active {
 	opacity: 1;
 }
 
-
-/*----------fooder-----------*/
+/*-----------------FOOTER ---------------*/
 .elements {
    display: flex;
    justify-content: space-between;
    margin-left: 50px;
    margin-right: 50px;
-   
-    
+      
 }
 .elements__column {
     margin-top: 20px;
     width: 30%;
 }
-
 .elements__tittle {
 padding: 10px 0;
 font-weight: 300;
 color: #fff;
 }
-  
 .elements__column a {
     margin-top: 30px;
     padding: 20px 0;
@@ -257,7 +246,6 @@ color: #fff;
     font-weight: 200;
     font-size: 13px;
 }
-
 .elements__box {
     margin-top: 5px;
 }
