@@ -1,5 +1,6 @@
 const objects = [
     {
+         images: "img/products/1.png",
          name: "corgi",
          price:5500,
          kind:"gothic",
@@ -8,6 +9,7 @@ const objects = [
          stock:false
    },
     {
+        images: "img/products/2.png",
         name: "gato",
         price:5500,
         kind:"anime character",
@@ -16,6 +18,7 @@ const objects = [
         stock:true
     },
     {
+        images: "img/products/3.png",
         name: "conejo",
         price:7500,
         kind:"dog",
@@ -24,6 +27,7 @@ const objects = [
         stock:true
     },
     {
+        images: "img/products/4.png",
         name: "anime",
         price: 5500,
         kind:"cat",
@@ -37,7 +41,7 @@ const objects = [
    const divobjects= document.getElementById("objects");
 
    objects.forEach(product => {
-       const {name,price,kind,description,material,stock}=product;
+       const {images,name,price,kind,description,material,stock}=product;
       if(price > 6000 || stock){
        console.log(product);
       } 
@@ -47,6 +51,7 @@ const objects = [
 
       pines.innerHTML=  `
       <h1 class= "product__name">${name}</h1>
+      <img src="${images}" alt="">
       <h2 class= "product__kind">${kind}</h2>
       <h3 class= "product__material">${material}</h3>
       <p>${description}</p>
