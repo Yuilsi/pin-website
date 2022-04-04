@@ -10,3 +10,5 @@ function guardar_datos(){
     const { name,age} = user;
     const email = user.email;
     }
+
+    

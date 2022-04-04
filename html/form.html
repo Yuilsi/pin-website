@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+        <div>
+            <h1>Pines</h1>
+            <h3>Añade un producto</h3>
+        </div>
+
+        <form action="" id="formU">
+            
+               <label for="name">Nombre:</label>
+               <input type="text" id="name" name="pin_name" />
+             
+             
+               <label for="description">Descripción:</label>
+               <textarea id="description" name="pin_description"></textarea>
+             
+              <label for="price">Precio:</label>
+                <input type="number" id="price" name="pin_price"/>
+             
+             <label for="images">Imagen:</label>
+                <input type="url" id="image" name="pin_image" placeholder="Inserta la URL de la imagen"/>
+             
+             
+                <label for="material">Material:</label>
+                <input type="radio" id="material" name="pin_material" value="metal"> Metal
+                <input type="radio" name="edad" value="plastico" required> Plastico
+             
+               <input type="submit">
+            </form>
+
+            
+
+   
+            <script src="../javascript/form.js"></script>
+
+</body>
+</html>
