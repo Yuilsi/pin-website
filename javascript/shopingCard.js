@@ -12,4 +12,5 @@ const btnAumentar=document.querySelector('.btn-info')
             console.log('me diste click disminuir')
             contador--
             span.textContent= contador
+            console-log(disminuir)
         })
