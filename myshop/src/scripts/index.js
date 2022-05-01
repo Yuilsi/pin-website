@@ -1,3 +1,15 @@
+
+import { initializeApp } from "firebase/app";
+import { getAuth} from "firebase/auth";
+import { login, createUser,addUserToDatabase, getUser} from "./functions/auth";
+import {getFirestore, getDoc} from "firebase/firestore";
+import firebaseConfig from "../utils/firebase";
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getFirestore(app);
+
 window.addEventListener('load', function(){       /*indica que cuando la pagina cargue va a realizar una funcion*/
 	new Glider(document.querySelector('.carousel__list'), {
 		slidesToShow: 1,
