@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../myshop/src/scripts/styles/login.css">
+    <title>sign up</title>
 </head>
 <body>
-    <form id="loginForm">
+    <form id="createUserForm">
+        <input type="text" placeholder="Nombre" name="name">
+        <input type="text" placeholder="Apellido" name="lastName">
+        <input type="text" placeholder="Apodo" name="nickname">
         <input type="email" placeholder="Correo electronico" name="email">
         <input type="password" placeholder="Contraseña" name="password">
-        <input type="submit" value="login">
-
+        <input type="submit" value="Crear usuario">
     </form>
-<a href="">Olvidaste tu contraseña</a>
-    <script src="./src/scripts/login.js" type="module"></script>
+
+    <script src="./src/scripts/app.js" type="module"></script>
 </body>
 </html>

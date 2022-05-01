@@ -1,4 +1,4 @@
-import { doc,setDoc } from "firebase/firestore";
+import { doc,setDoc,getDoc } from "firebase/firestore";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 
 
@@ -20,11 +20,26 @@ async function createUser(auth,{email,password}){
     }
   
   }
+
+ /* async function getUser(db, user){
+    const docRef = doc(db, "users", user.uid);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      console.log("Document data:", docSnap.data());
+      return docSnap;
+    } else {
+      // doc.data() will be undefined in this case
+      console.log("No such document!");
+    }
+    
+  }*/
   
   async function login(auth, email,password){
   try {
    const {user} = await signInWithEmailAndPassword(auth,email,password);
    console.log(user);
+   return user;
   } catch (e) {
    // alert("corrreo o contraseña invalda : (");
   //  console.log(e)
@@ -47,6 +62,6 @@ async function createUser(auth,{email,password}){
   export {
       createUser,
       login,
-      addUserToDatabase
+      addUserToDatabase,// getUser
 
   }
