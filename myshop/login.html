@@ -8,14 +8,34 @@
     <link rel="stylesheet" href="../myshop/src/scripts/styles/login.css">
 </head>
 <body>
-    <form class="login"
-    id="loginForm">
-        <input type="email" placeholder="Correo electronico" name="email">
-        <input type="password" placeholder="Contraseña" name="password">
-        <input type="submit" value="login">
+    <div class="container-form container">
+        <div class="image-form"></div>
+        <form class="form" id="loginForm">
+            <div class="text-form">
+                <h2>Iniciar sesión</h2>
+            </div>
+            <div class="input">
+                <label for="usuario">Usuario</label>
+                <input type="email" placeholder="Correo electronico" name="email">
+            </div>
+            <div class="input">
+                <label for="userPassword">contraseña</label>
+                <input type="password" placeholder="Contraseña" name="password">
+                <input type="submit" value="login">
+            </div>
+            <div class="forgot-password">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="input">
+                <input type="submit" value="Ingresar">
+            </div>
+        </form>
+        <div class="sign up">
+            <h4>¿No tienes una cuenta?<a href="#">Registrarse</a></h4>
+        </div>
 
-    </form>
-<a href="">Olvidaste tu contraseña</a>
+    </div>
+
     <script src="./src/scripts/login.js" type="module"></script>
 </body>
 </html>

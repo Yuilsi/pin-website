@@ -10,22 +10,63 @@
 
     :root{
         --azulOscuro: #010A13;
+        --blanco: #ffff;
+        --gris:#828282;        
+        --grisClaro: #E0E0E0; 
+       
     }
 
     body {
-       font-family: karla;
-        
+       font-family: karla;   
     }
     
+   /*----Todos los elementos respeten los valores determinados de wirh y heigth*/ 
 
-
-    .caja {
-        width: 300px;
-        height: 300px;
-        background-color: var(--azulOscuro);
-        padding: 20px 0;
-
+    html{
+        box-sizing: border-box;
     }
+
+  /*  *,*::after, *::before{
+        box-sizing: inherit;
+    }
+
+/*----------------------------------------------------*/
+   
+.container{
+    margin: 0 auto;
+    max-width: 120px;
+    width: 95%;
+}
+.image-form{
+    background-image: url('./images/loginImage.png');
+    background-position: center center;
+    background-size: cover;
+    flex :0 0 calc(60%);
+}
+.container-form{
+    display: flex;
+
+}
+
+.form {
+    padding: 50px;
+    background-color:var(--azulOscuro) ;
+}
+
+.text-form h2 {
+    color: var(--blanco);
+}
+.input input {
+    color: #ffff;
+    opacity: 19%;
+   
+}
+.input label {
+    color: var(--gris);
+}
+
+
+
 
    
    
