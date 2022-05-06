@@ -13,7 +13,7 @@
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
 
 
-    <link rel="stylesheet" href="./homepage/style.css">
+ <link rel="stylesheet" type="text/css" href="./homepage/style.css">
     <link rel="stylesheet" href="./homepage/mediaqueris.css">
 
 </head>
@@ -47,11 +47,26 @@
                     <button><img src="../img/icons/shopping_cart.png"/></button>
                 </li>
                 <li class="menu__item">
-                    <button><img src="../img/login.png"/></button>
+                    <button id="open"><img src="../img/login.png"/></button>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <!---------------------VENTANA MODAL------------------------>
+<div class="modal_container">
+   
+    <div class="modal modal close">
+        <div>
+          <button id="login">Iniciar sesión</button>
+            <h4>¿Eres nuevo?</h4>
+            <button id="signUp">Registrarte</button>
+           <!-- <button id="close">Cerrar</button> -->
+           <div class="arrow up"></div>
+        </div>
+      </div>
+    </div>
+  
     <!---------------------BANNER---------------------------->
     <section class="banner">
             <div class="banner__elements">
@@ -183,6 +198,7 @@
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 	<script src="./src/scripts/index.js"  type="module"></script>
+   
 </body>
 
 

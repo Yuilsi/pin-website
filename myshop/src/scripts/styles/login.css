@@ -7,15 +7,25 @@
      box-sizing: border-box;
     
     }
-    html,body {
-       font-family: karla;
-        
+
+    :root{
+        --azulOscuro: #010A13;
     }
 
     body {
-        background-image:url("./images/background_login.png") ;
+       font-family: karla;
+        
+    }
+    
+
+
+    .caja {
+        width: 300px;
+        height: 300px;
+        background-color: var(--azulOscuro);
+        padding: 20px 0;
+
     }
 
-    #loginForm{
-        align-items: left;
-    }
+   
+   
