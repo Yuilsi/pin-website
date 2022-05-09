@@ -1,32 +1,30 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;   
-}
-section
-{
+$colorOrange:F64D33;
+$colorBlue: 131313;
+$colorBlack: FFFFFF;
+
+section {
     position: relative;
     width: 100%;
     height: 100wh;
     display: flex;
 }
-section .imgBx {
+
+section .imageLogin {
 position: relative;
 width: 50%;
 height: 100%;
 }
-section .imgBx:before {
+section .imageLogin:before {
 content: '';
 position: absolute;
 width: 100%;
 height: 700px;
-background: linear-gradient(225deg, #e91e63, #03a9f4);
+background: linear-gradient(225deg, $colorBlue, $colorOrange);
 z-index: 2;
 mix-blend-mode:screen;
 }
 
-section .imgBx img {
+section .imageLogin img {
  position: absolute;
  top: 0;
  left: 0;
@@ -49,7 +47,7 @@ section .contentBx .formBx{
 }
 
 section .contentBx .formBx h2 {
-    color: #03a9f4;
+    color: $colorBlue;
     font-weight: 1.5em;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -62,7 +60,7 @@ section .contentBx .formBx .inputBx span {
    font-size: 16px;
    margin-bottom: 5px;
    display: inline-block;
-   color: blue;
+   color: $colorOrange;
    font-weight: 300;
    font-size: 16px;
    letter-spacing: 1px;
@@ -73,17 +71,17 @@ width: 100%;
 padding: 10px 20px;
 outline: none;
 font-weight: 400;
-border: 1px solid #e91e63;
+border: 1px solid $colorBlack;
 font-size:16px;
 letter-spacing: 1px;
-color: black;
+color: $colorBlue;
 background: transparent;
 border-radius: 10px;
 }
 
 section .contentBx .formBx .inputBx input[type="submit"]{
-    background: #03a9f4;
-    color: aquamarine;
+    background: $colorOrange;
+    color: $colorBlue;
     outline: none;
     border: none;
     font-weight: 500;
@@ -96,20 +94,20 @@ background: white;
 
 section .contentBx .formBx .remember {
     margin-bottom: 10px;
-    color: rgb(199, 29, 29);
+    color: $colorBlue;
     font-weight: 400;
     font-size: 14px;
 }
 section .contentBx .formBx .inputBx p {
-   color: rgb(0, 255, 98);
+   color: $colorOrange;
 }
 
 section .contentBx .formBx .inputBx p a {
-    color: rgb(255, 208, 0);
+    color: $colorOrange;
  }
 
  section .contentBx .formBx h3 {
-     color: black;
+     color: $colorBlue;
      text-align: center;
      margin: 80px 0 10px;
      font-weight: 500;
@@ -146,7 +144,8 @@ section .contentBx .formBx .inputBx p a {
  }
 
  @media (max-width: 768px){
-    section .imgBx {
+    section .imageLogin
+ {
         position: absolute;
         top:0;
         left: 0;
@@ -161,10 +160,11 @@ section .contentBx .formBx .inputBx p a {
         height: 100%;
         z-index: 1;
     }
+    $colorwhite :  #ffffffe6;
     section .contentBx .formBx {
         width: 100%;
         padding: 40px;
-        background: rgb(255 255 255 / 0.9);
+        background: $colorwhite;
         margin: 50px;
         border-radius: 10;
     }
@@ -177,3 +177,4 @@ section .contentBx .formBx .inputBx p a {
     }
 
  }
+
