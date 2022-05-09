@@ -1,6 +1,8 @@
 @charset "UTF-8";
 $tablets: "(max-width: 768px)";
-
+$colorOrange:F64D33;
+$colorBlue: 131313;
+$colorBlack: FFFFFF;
 
 h1 {
   font-weight: 800;
@@ -61,17 +63,15 @@ header {
 .menu__item {
   margin: 0px 20px;
   margin-top: 18px;
-  /*arriba y a los lados*/
-}
+     a {
+      color: #fff; 
+     }
+     button {
+       margin-right: 30px;
+       background-color: transparent;
+       border: none;
+     }
 
-.menu__item a {
-  color: #fff;
-}
-
-.menu__item button {
-  margin-right: 30px;
-  background-color: transparent;
-  border: none;
 }
 
 .menu__item a .active, .menu__item a:hover {
@@ -131,34 +131,33 @@ nav {
   width: 100%;
   height: 700px;
   position: relative;
-}
 
-.banner__background {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /*adapta la imagen*/
-}
+  .banner__elements {
+    margin-top: 2em;
+    margin-left: 23px;
+    width: 450px;
+    background-color: transparent;
+    padding: 50px;
+    position: absolute;
+    /*el contenido se sobrepone a la pagina*/
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+     transform: translateY(-50%);
 
-.banner__elements {
-  margin-top: 2em;
-  margin-left: 23px;
-  width: 450px;
-  background-color: transparent;
-  padding: 50px;
-  position: absolute;
-  /*el contenido se sobrepone a la pagina*/
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.banner__elements a {
-  font-weight: 600;
-  color: white;
-  padding: 18px 100px;
-  background-color: #F64D33;
+     a {
+      font-weight: 600;
+      color: white;
+      padding: 18px 100px;
+      background-color: #F64D33;
+     }
+  }
+  .banner__background {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    /*adapta la imagen*/
+  }
 }
 
 /*----------section 3-----------*/
@@ -279,6 +278,13 @@ nav {
 .elements__column {
   margin-top: 20px;
   width: 30%;
+  a {
+  margin-top: 30px;
+  padding: 20px 0;
+  color: #ffffff83;
+  font-weight: 200;
+  font-size: 13px;
+  }
 }
 
 .elements__tittle {
@@ -287,121 +293,129 @@ nav {
   color: #fff;
 }
 
-.elements__column a {
-  margin-top: 30px;
-  padding: 20px 0;
-  color: rgba(255, 255, 255, 0.514);
-  font-weight: 200;
-  font-size: 13px;
-}
-
 .elements__box {
   margin-top: 5px;
 }
 
 /*-------------------------VENTANA MODAL---------------------------------*/
-/* Demo of the tool-tip CSS */
-.modal_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  z-index: 1000;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  pointer-events: none;
-}
-
-.modal {
-  position: absolute;
-  z-index: 1;
-  padding: 5px 10px;
-  color: rgba(87, 85, 85, 0.836);
-  width: auto;
-  -webkit-box-shadow: 0px 7px 11px 0px rgba(240, 231, 231, 0.3);
-          box-shadow: 0px 7px 11px 0px rgba(240, 231, 231, 0.3);
-  background-color: transparent;
-  border-radius: 10px;
-  margin-top: 100px;
-  margin-right: 50px;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.modal-close {
-  -webkit-transform: translateY(-200%);
-          transform: translateY(-200%);
-}
-
-.modal div {
-  padding: 0.5em;
-  position: relative;
-  z-index: 1;
-  font-size: 12px;
-}
-
-.modal::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-
-.modal .arrow {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 0;
-  -webkit-box-shadow: 7px 7px 11px 0px rgba(112, 111, 111, 0.3);
-          box-shadow: 7px 7px 11px 0px rgba(112, 111, 111, 0.3);
-  background: #ffffff;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  z-index: -1;
-  left: -3px;
-  top: calc(50% - 8px);
-}
-
-.modal .arrow.up {
-  top: -8px;
-  left: calc(50% - 8px);
-}
-
-button {
-  background-color: #e94c03;
+/*  
+#open {
+  background-color: #47a386;
   border: 0;
   border-radius: 5px;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px #00000033;
   color: #fff;
   font-size: 14px;
-  width: 10em;
   padding: 10px 25px;
 }
+*/
 
-#signUp {
-  background-color: #010A13;
-}
-
-h4 {
-  margin: 1.5em auto 1em;
+.modal-container {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;  
+  position: absolute;
+  z-index: 2000;
+  pointer-events: none;
+ top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw; 
 }
 
 .show {
   pointer-events: auto;
   opacity: 1;
 }
+
+.modal {
+ /* background-color: #fff;*/
+ position: absolute;
+ z-index: 1;
+ padding: 5px 10px;
+ color: #575555d5;
+ width: auto;
+  -webkit-box-shadow: 0px 7px 11px 0px #f0e7e74d; /*sombras*/
+  box-shadow: 0px 7px 11px 0px #f0e7e74d;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 100px;
+  margin-right: 50px;
+  h4 {
+    margin: 1.5em auto 1em;
+  
+  }
+}
+
+div{
+  padding: 0.5em;
+  position: relative;
+  z-index: 1;
+  
+
+  #login {
+  background-color: #F64D33;
+  border: 0;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 50px;
+  -webkit-box-shadow: 0 2px 4px #00000033;
+  box-shadow: 0 2px 4px #00000033;
+  font-weight: 200;
+  color: #ffffff;
+  width: 200px;
+  height: 38px;
+
+  }
+
+  #signUp {
+  background-color: #010A13;
+  border: 0;
+  border-radius: 5px;
+  padding: 7px;
+  -webkit-box-shadow: 0 2px 4px #00000033;
+  box-shadow: 0 2px 4px #00000033;
+  color: #ffffff;
+  width: 200px;
+  height: 38px;
+  }
+
+
+}
+
+.arrow {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: -1;
+  left: -3px;
+  top: calc(50% - 8px);
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+}
+.arrow.up {
+  top: -8px;
+  left: calc(50% - 8px);
+}
+
+
+
+
+
+
 /*# sourceMappingURL=menu.css.map */

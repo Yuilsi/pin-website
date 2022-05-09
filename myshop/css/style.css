@@ -64,7 +64,6 @@ header {
 .menu__item {
   margin: 0px 20px;
   margin-top: 18px;
-  /*arriba y a los lados*/
 }
 
 .menu__item a {
@@ -144,15 +143,7 @@ ul.show {
   position: relative;
 }
 
-.banner__background {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  /*adapta la imagen*/
-}
-
-.banner__elements {
+.banner .banner__elements {
   margin-top: 2em;
   margin-left: 23px;
   width: 450px;
@@ -165,11 +156,19 @@ ul.show {
   transform: translateY(-50%);
 }
 
-.banner__elements a {
+.banner .banner__elements a {
   font-weight: 600;
   color: white;
   padding: 18px 100px;
   background-color: #F64D33;
+}
+
+.banner .banner__background {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  /*adapta la imagen*/
 }
 
 /*----------section 3-----------*/
@@ -292,18 +291,18 @@ ul.show {
   width: 30%;
 }
 
+.elements__column a {
+  margin-top: 30px;
+  padding: 20px 0;
+  color: #ffffff83;
+  font-weight: 200;
+  font-size: 13px;
+}
+
 .elements__tittle {
   padding: 10px 0;
   font-weight: 300;
   color: #fff;
-}
-
-.elements__column a {
-  margin-top: 30px;
-  padding: 20px 0;
-  color: rgba(255, 255, 255, 0.514);
-  font-weight: 200;
-  font-size: 13px;
 }
 
 .elements__box {
@@ -311,54 +310,107 @@ ul.show {
 }
 
 /*-------------------------VENTANA MODAL---------------------------------*/
-/* Demo of the tool-tip CSS */
-.modal_container {
+/*  
+#open {
+  background-color: #47a386;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px #00000033;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 25px;
+}
+*/
+.modal-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  z-index: 1000;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  opacity: 0;
+  position: absolute;
+  z-index: 2000;
   pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
 }
 
 .modal {
+  /* background-color: #fff;*/
   position: absolute;
   z-index: 1;
   padding: 5px 10px;
-  color: rgba(87, 85, 85, 0.836);
+  color: #575555d5;
   width: auto;
-  -webkit-box-shadow: 0px 7px 11px 0px rgba(240, 231, 231, 0.3);
-  box-shadow: 0px 7px 11px 0px rgba(240, 231, 231, 0.3);
-  background-color: transparent;
+  -webkit-box-shadow: 0px 7px 11px 0px #f0e7e74d;
+  /*sombras*/
+  box-shadow: 0px 7px 11px 0px #f0e7e74d;
+  background-color: #ffffff;
   border-radius: 10px;
   margin-top: 100px;
   margin-right: 50px;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
 }
 
-.modal-close {
-  -webkit-transform: translateY(-200%);
-  transform: translateY(-200%);
+.modal h4 {
+  margin: 1.5em auto 1em;
 }
 
-.modal div {
+div {
   padding: 0.5em;
   position: relative;
   z-index: 1;
-  font-size: 12px;
 }
 
-.modal::before {
+div #login {
+  background-color: #F64D33;
+  border: 0;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 50px;
+  -webkit-box-shadow: 0 2px 4px #00000033;
+  box-shadow: 0 2px 4px #00000033;
+  font-weight: 200;
+  color: #ffffff;
+  width: 200px;
+  height: 38px;
+}
+
+div #signUp {
+  background-color: #010A13;
+  border: 0;
+  border-radius: 5px;
+  padding: 7px;
+  -webkit-box-shadow: 0 2px 4px #00000033;
+  box-shadow: 0 2px 4px #00000033;
+  color: #ffffff;
+  width: 200px;
+  height: 38px;
+}
+
+.arrow {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: -1;
+  left: -3px;
+  top: calc(50% - 8px);
+}
+
+.arrow::before {
   position: absolute;
   content: '';
   top: 0;
@@ -369,51 +421,9 @@ ul.show {
   border-radius: 10px;
 }
 
-.modal .arrow {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 0;
-  -webkit-box-shadow: 7px 7px 11px 0px rgba(112, 111, 111, 0.3);
-  box-shadow: 7px 7px 11px 0px rgba(112, 111, 111, 0.3);
-  background: #ffffff;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  z-index: -1;
-  left: -3px;
-  top: calc(50% - 8px);
-}
-
-.modal .arrow.up {
+.arrow.up {
   top: -8px;
   left: calc(50% - 8px);
-}
-
-button {
-  background-color: #e94c03;
-  border: 0;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-size: 14px;
-  width: 10em;
-  padding: 10px 25px;
-}
-
-#signUp {
-  background-color: #010A13;
-}
-
-h4 {
-  margin: 1.5em auto 1em;
-}
-
-.show {
-  pointer-events: auto;
-  opacity: 1;
 }
 section {
   position: relative;
@@ -430,7 +440,7 @@ section .imageLogin {
   height: 100%;
 }
 
-section .imageLogin:before {
+section .imageLogin::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -505,7 +515,7 @@ section .contentBx .formBx .inputBx input {
   border-radius: 10px;
 }
 
-section .contentBx .formBx .inputBx input[type="submit"] {
+section .contentBx .formBx .inputBx input input[type="submit"] {
   background: F64D33;
   color: 131313;
   outline: none;
@@ -514,15 +524,8 @@ section .contentBx .formBx .inputBx input[type="submit"] {
   cursor: pointer;
 }
 
-section .contentBx .formBx .inputBx input[type="submit"]:hover {
+section .contentBx .formBx .inputBx input input[type="submit"]:hover {
   background: white;
-}
-
-section .contentBx .formBx .remember {
-  margin-bottom: 10px;
-  color: 131313;
-  font-weight: 400;
-  font-size: 14px;
 }
 
 section .contentBx .formBx .inputBx p {
@@ -531,6 +534,13 @@ section .contentBx .formBx .inputBx p {
 
 section .contentBx .formBx .inputBx p a {
   color: F64D33;
+}
+
+section .contentBx .formBx .remember {
+  margin-bottom: 10px;
+  color: 131313;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 section .contentBx .formBx h3 {
@@ -572,8 +582,8 @@ section .contentBx .formBx .sci li {
 }
 
 section .contentBx .formBx .sci li img {
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
   -webkit-filter: invert(1);
           filter: invert(1);
 }
