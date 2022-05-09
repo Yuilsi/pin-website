@@ -1,8 +1,8 @@
 @charset "UTF-8";
 h1 {
-  font-weight: 800;
   color: #F64D33;
   font-size: 3em;
+  font-weight: 1.5em;
 }
 
 h2 {
