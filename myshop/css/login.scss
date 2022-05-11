@@ -1,14 +1,15 @@
-$colorOrange:F64D33;
-$colorBlue: 131313;
-$colorBlack: FFFFFF;
+$colorOrange:#F64D33;
+$colorBlue: #131313;
+$colorBlack: #FFFFFF;
 
 $tablets: "(max-width: 768px)";
 
 section {
     position: relative;
     width: 100%;
-    height: 100wh;
+    height: 100%;
     display: flex; 
+
     .imageLogin {
         
         position: relative;
@@ -17,9 +18,12 @@ section {
 
         &::before {
             content: '';
+            top: 0;
+            left: 0;
+
             position: absolute;
             width: 100%;
-            height: 700px;
+            height: 768px;
             background: linear-gradient(225deg, $colorBlue, $colorOrange);
             z-index: 2;
             mix-blend-mode:screen;
@@ -29,7 +33,7 @@ section {
             top: 0;
             left: 0;
             width: 100%;
-            height: 700px;
+            height: 768px;
             object-fit: cover;  
             
         }
@@ -42,70 +46,75 @@ section {
         justify-content: center;
         align-items: center;
         width: 50%;
-        height: 600px;
+        height: 768px;
     
         .formBx{
+            margin-top: 50%;
             width: 50%;
-            h2{
+            .tittleLogin {
                 color: $colorBlue;
                 font-weight: 1.5em;
                 text-transform: uppercase;
                 margin-bottom: 20px;
                 display: inline-block  
             }
-            .inputBx{
-                margin-bottom: 20px;
-                span{
-                    font-size: 16px;
-                    margin-bottom: 5px;
-                    display: inline-block;
-                    color: $colorOrange;
-                    font-weight: 300;
-                    font-size: 16px;
-                    letter-spacing: 1px;
-    
-                }
-                input {
-                    width: 100%;
-                    padding: 10px 20px;
-                    outline: none;
-                    font-weight: 400;
-                    border: 1px solid $colorBlack;
-                    font-size:16px;
-                    letter-spacing: 1px;
-                    color: $colorBlue;
-                    background: transparent;
-                    border-radius: 10px;
-
-                    input[type="submit"] {   
-                        background: $colorOrange;
-                        color: $colorBlue;
+            .form {
+                .inputBx{
+                    margin-bottom: 20px;
+                    span{
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                        display: inline-block;
+                        color: $colorOrange;
+                        font-weight: 300;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+        
+                    }
+                    input {
+                        width: 100%;
+                        padding: 10px 20px;
                         outline: none;
-                        border: none;
-                        font-weight: 500;
-                        cursor: pointer;
-                        &:hover {
-                            background: white;
+                        font-weight: 400;
+                        border: 1px solid $colorBlack;
+                        font-size:16px;
+                        letter-spacing: 1px;
+                        color: $colorBlue;
+                        background: transparent;
+                        border-radius: 10px;
     
+                        input[type="submit"] {   
+                            background: $colorOrange;
+                            color: $colorBlue;
+                            outline: none;
+                            border: none;
+                            font-weight: 500;
+                            cursor: pointer;
+                            &:hover {
+                                background: white;
+        
+                            }
+                        }
+    
+    
+                    }
+                    p {
+                        color: $colorOrange; 
+                        a {
+                            color: $colorOrange;  
                         }
                     }
-
-
+    
                 }
-                p {
-                    color: $colorOrange; 
-                    a {
-                        color: $colorOrange;  
-                    }
+                .remember {
+                    margin-bottom: 10px;
+                    color: $colorBlue;
+                    font-weight: 400;
+                    font-size: 14px;
                 }
+
 
             }
-        .remember {
-            margin-bottom: 10px;
-            color: $colorBlue;
-            font-weight: 400;
-            font-size: 14px;
-        }
         h3 {
             color: $colorBlue;
             text-align: center;
