@@ -1,27 +1,3 @@
-.product {
-  width: 200px;
-  display: block;
-  background-color: #80807e;
-  border-radius: 0 0 10px 10px;
-}
-
-.product__image {
-  width: 100%;
-  height: 150px;
-}
-
-.product__info {
-  padding: 10px;
-}
-
-.product__name {
-  margin: 5px 0;
-}
-
-.product__price {
-  margin: 5px 0;
-}
-
 /*@use 'windous' ;*/
 * {
   font-family: 'Karla', sans-serif;

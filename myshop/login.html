@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.scss">
 </head>
 <body>
    <section>
@@ -44,25 +44,44 @@
            </div>
        </div>
    </section>
+   
 
    <section>
-       <div class="imageSignUp">
-        <img src="./src/scripts/styles/images/loginImage.png"></div>
+       <div class="contentImage">
+           <div class="imageSignUp">
+            <img src="./src/scripts/styles/images/loginImage.png">
+        </div>
+       </div>
         <div class="containerSignIn">
+            <h2>Registrarse</h2>
             <div class="formSignUp">
-                <h2>Registrarse</h2>
                 <form id="createUserForm">
-                 <input type="text" placeholder="Nombre" name="name">
-                 <input type="text" placeholder="Apellido" name="lastName">
-                 <input type="email" placeholder="Correo electronico" name="email">
-                 <input type="password" placeholder="Contraseña" name="password">
-                 <input type="submit" value="Crear usuario">
+                    <div>
+                        <span>Nombre</span>
+                        <input type="text" placeholder="Nombre" name="name">
+                    </div>
+                    <div>
+                        <span>Apellido</span>
+                        <input type="text" placeholder="Apellido" name="lastName">
+                    </div>
+                    <div>
+                        <span>Email</span>
+                        <input type="email" placeholder="Correo electronico" name="email">
+                    </div>
+                    <div>
+                        <span>Contraseña</span>
+                        <input type="password" placeholder="Contraseña" name="password">
+                    </div>
+                    <div>
+                        <div class="inputBx"></div>
+                        <input type="submit" value="Crear usuario">
+                    </div>
                 </form>
             </div>
         </div>
    </section>
 
 
-    <script src="./src/scripts/index.js" type="module"></script>
+    <script src="./src/scripts/login.js" type="module"></script>
 </body>
 </html>

@@ -39,3 +39,13 @@ open.addEventListener('click', () => {
 });
 
 
+console.log("hola")
+
+document.body.addEventListener('click', (e) => {
+
+	if (modal_container.classList.contains("show")) {
+		modal_container.classList.remove('show');  
+	}
+  });
+
+  
