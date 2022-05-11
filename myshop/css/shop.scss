@@ -1,8 +1,15 @@
+.products {
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+}
+
 .product {
     width: 200px;
     display: block;
     background-color: #80807e;
-    border: radius 10px; ;
+    border: radius 10px; 
+    margin-bottom: 15px;
     &__image{
         width: 100%;
         height: 150px;

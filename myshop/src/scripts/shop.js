@@ -1,42 +1,69 @@
-import { db } from "./app";
+import { db, auth } from "./app";
+import { onAuthStateChanged } from "firebase/auth";
 import { getProducts } from "./functions/products";
-
+import { createFirebaseCart, getFirebaseCart  } from "./functions/cart";
+import { addProductToCart, getMyLocalCart, currencyFormat } from "../utils";
 
 const productSection = document.getElementById("products");
-
 const categoryFilter = document.getElementById("category");
 const orderFilter = document.getElementById("order");
-let products = []
 
-async function loadProducts(){
+let userLogged = undefined;
+let products = [];
+let cart = [];
+
+async function loadProducts() {
     const firebaseProducts = await getProducts(db);
-    productSection.innerHTML = "";  //indica que la página esta cargando
+    productSection.innerHTML = "";
     firebaseProducts.forEach(product => {
-        renderProduc(product);
-       
+        renderProduct(product);
     });
 
     products = firebaseProducts;
 }
 
-function renderProduc(item){
+function renderProduct(item) {
     const product = document.createElement("a");
     product.className = "product";
 
-    product.setAttribute("href", `/product.html?id=dsfdgdgdg`)
+    product.setAttribute("href", `./product.html?id=${item.id}`);
 
-    const coverImage = item.images ? item.images[0] : "https://cdn.dribbble.com/users/55871/screenshots/2158022/media/8f2a4a2c9126a9f265fb9e1023b1698a.jpg?compress=1&resize=400x300";
+    const coverImage = item.images ? item.images[0] : "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png";
 
- product.innerHTML = `  <img src="${coverImage}" alt="" class="product__image">
- <div class="product__info">
- <p class="product__category>${item.category}</p>
-     <h2 class="product__name">${item.name}</h2>
-     <h3 class="product__price">$${item.price}</h3>
-     <button class="product__cart">Añadir al carrito</button>
+    const isProductAddedToCart = cart.some((productCart) => productCart.id === item.id);
 
- </div>`;
+    const productButtonCart = isProductAddedToCart ?
+    '<button class="product__cart" disabled>Producto añadido</button>' :
+    '<button class="product__cart">Añadir al carrito</button>';
 
- productSection.appendChild(product);
+    product.innerHTML = `
+    <img src="${coverImage}" alt="" class="product__image">
+    <div class="product__info">
+        <p class="product__category">${item.category}</p> 
+        <h2 class="product__name">${item.name}</h2>
+        <h3 class="product__price">${currencyFormat(item.price)}</h3>
+        ${productButtonCart}
+    </div>
+    `;
+
+    productSection.appendChild(product);
+
+    const productCartButton = product.querySelector(".product__cart");
+
+    productCartButton.addEventListener("click", async (e) => {
+        e.preventDefault(); // evitar que al dar click en el boton, funcione el enlace del padre.
+
+        cart.push(item);
+        addProductToCart(cart);
+
+        if (userLogged) {
+            await createFirebaseCart(db, userLogged.uid, cart);
+        }
+
+        productCartButton.setAttribute("disabled", true);
+        productCartButton.innerText = "Producto añadido";
+
+    });
 }
 
 function filterBy(){
@@ -65,12 +92,28 @@ function filterBy(){
     });
 
 }
-categoryFilter.addEventListener("change", e =>{
+
+categoryFilter.addEventListener("change", e => {
     filterBy();
 });
 
-orderFilter.addEventListener("change", e =>{
+orderFilter.addEventListener("change", e => {
     filterBy();
 });
 
-loadProducts();
+onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      userLogged = user;
+      cart = await getFirebaseCart(db, userLogged.uid);
+      // ...
+    } else {
+        cart = getMyLocalCart();
+      // User is signed out
+      // ...
+    }
+
+    loadProducts();
+
+  });
