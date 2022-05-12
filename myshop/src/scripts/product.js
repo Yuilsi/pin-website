@@ -19,14 +19,12 @@ function getParam(param) {
 
 async function loadProduct() {
     const productId = getParam("id"); // http://localhost:1234/product.html?id=TXQ9Wf1GIoAOJLkIEMYo&age=20
-
     const data = await getProduct(productId);
-
     const product = {
         ...data,
         id: productId, // docSnap.id,
     }
-
+    
     renderProduct(product);
 }
 
@@ -102,7 +100,7 @@ onAuthStateChanged(auth, async (user) => {
 
     loadProduct();
 
+    console.log(loadProduct)
   });
-
 
   
