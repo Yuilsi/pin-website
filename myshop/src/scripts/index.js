@@ -33,8 +33,9 @@ window.addEventListener('load', function(){       //indica que cuando la pagina 
 
 const open = document.getElementById('open');
 const modal_container = document.getElementById('modal_container');
+const modalInfo = document.getElementById('windous');
 
-open.addEventListener('click', () => {
+/*open.addEventListener('click', () => {
   modal_container.classList.add('show');  
 });
 
@@ -46,6 +47,26 @@ document.body.addEventListener('click', (e) => {
 	if (modal_container.classList.contains("show")) {
 		modal_container.classList.remove('show');  
 	}
-  });
+  });*/
+
+  // Agregar la clase .open para mostrar el modal
+open.addEventListener("click", e => {
+	modal_container.classList.add("open");
+});
+
+document.addEventListener('click', (event) => {
+		// Validamos si clickeamos dentro del botón o de los inputs del modal
+    const isClickInsideModal = modalInfo.contains(event.target);
+    const isClickInsideButton = open.contains(event.target);
+    
+    // Si el click no fue dentro de esos 2 elementos, procedemos a remover la clase
+    if (!isClickInsideModal && !isClickInsideButton) {
+    	modal_container.classList.remove("open");
+    }
+});
+
+
+
+
 
   
