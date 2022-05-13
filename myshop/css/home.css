@@ -279,14 +279,8 @@ ul.show {
   margin: 1.5em auto 1em;
 }
 
-div {
-  padding: 0.5em;
-  position: relative;
-  z-index: 1;
-}
-
-div #login {
-  background-color: #F64D33;
+.button__modal {
+  display: block;
   border: 0;
   border-radius: 5px;
   padding: 7px;
@@ -299,16 +293,12 @@ div #login {
   height: 38px;
 }
 
-div #signUp {
+.button__modal--login {
+  background-color: #F64D33;
+}
+
+.button__modal--signUp {
   background-color: #010A13;
-  border: 0;
-  border-radius: 5px;
-  padding: 7px;
-  -webkit-box-shadow: 0 2px 4px #00000033;
-  box-shadow: 0 2px 4px #00000033;
-  color: #ffffff;
-  width: 280px;
-  height: 38px;
 }
 
 .arrow {
