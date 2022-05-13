@@ -34,11 +34,19 @@ window.addEventListener('load', function(){       //indica que cuando la pagina 
 const open = document.getElementById('open');
 const modal_container = document.getElementById('modal_container');
 const modalInfo = document.getElementById('windous');
-const signUp = document.getElementById('signUp');
+const signUp = document.getElementById('signup');
+const login = document.getElementById('logIn');
 
-/*open.addEventListener('click', () => {
-  modal_container.classList.add('show');  
+login.addEventListener('click', () => {
+	localStorage.setItem("loginAction", "login");
 });
+
+signUp.addEventListener('click', () => {
+  localStorage.setItem("loginAction", "register");
+});
+
+
+/*
 
 
 console.log("hola")
