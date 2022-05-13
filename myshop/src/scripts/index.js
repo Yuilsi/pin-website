@@ -34,6 +34,7 @@ window.addEventListener('load', function(){       //indica que cuando la pagina 
 const open = document.getElementById('open');
 const modal_container = document.getElementById('modal_container');
 const modalInfo = document.getElementById('windous');
+const signUp = document.getElementById('signUp');
 
 /*open.addEventListener('click', () => {
   modal_container.classList.add('show');  
@@ -52,6 +53,12 @@ document.body.addEventListener('click', (e) => {
   // Agregar la clase .open para mostrar el modal
 open.addEventListener("click", e => {
 	modal_container.classList.add("open");
+
+});
+
+signUp.addEventListener('click',(e)=>{
+	localStorage.setItem('registro',true);
+	window.location.href = './login.html'
 });
 
 document.addEventListener('click', (event) => {
@@ -64,6 +71,8 @@ document.addEventListener('click', (event) => {
     	modal_container.classList.remove("open");
     }
 });
+
+
 
 
 
