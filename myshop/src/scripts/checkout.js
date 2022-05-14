@@ -2,6 +2,7 @@ import { auth, db } from "./app";
 import { onAuthStateChanged } from "firebase/auth";
 import { getFirebaseCart } from "./functions/cart";
 import { getMyLocalCart, currencyFormat } from "../utils/index";
+import { addOrder } from "./functions/checkout";
 
 const checkoutForm = document.getElementById("checkoutForm");
 const orderSection = document.getElementById("checkoutOrder");

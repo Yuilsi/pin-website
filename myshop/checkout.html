@@ -9,12 +9,60 @@
 
 </head>
 <body>
-    <ul class="cart" id="cart">
-    </ul>
-    <div id="total"></div>
-       
-    </div>
+   
+    <section class="checkout">
+        <div class="checkout__checkout">
+            <h2 class="checkout__title">Informacion de pedido</h2>
     
+            <form action="" id="checkoutForm">
+                <h4 class="checkout__subtitle">Comprador</h4>
+              
+                <label for="address" class="checkout__label">Apellido</label>
+                <input type="text" id="address" name="address" class="checkout__input" placeholder="Address" required>
+    
+                <label for="city" class="checkout__label">Ciudad</label>
+                <input type="text" id="city" name="city" class="checkout__input" placeholder="City" required>
+    
+                <label for="cell" class="checkout__label">Celular</label>
+                <input type="text" name="cell" placeholder="Cellphone number" id="cell" class="checkout__input" required>
+    
+                
+                <p class="checkout__paragraph checkout__paragraph--price" id="shippingPrice"></p>
+    
+                <h4 class="checkout__subtitle checkout__subtitle--after">Informacion de pago</h4>
+                <div class="checkout__names">
+                    <div class="checkout__subcolumn">
+                        <label for="expiration" class="checkout__label">Fecha de expedición</label>
+                        <input type="month" id="expiration" name="expiration" class="checkout__input checkout__input--column" required>
+                    </div>
+    
+                    <div class="checkout__subcolumn">
+                        <label for="code" class="checkout__label">Código</label>
+                        <input type="number" id="code" name="code" class="checkout__input checkout__input--column" placeholder="Security code" required>
+                    </div>
+                </div>
+    
+                <input type="submit" value="Comprar" class="checkout__submit">
+            </form>
+        </div>
+
+        <div class="checkout__order" id="checkoutOrder">
+            <h4 class="checkout__title checkout__title--order">Order</h4>
+            <div class="checkout__totalBox">
+                <h5 class="checkout__total">Total: </h5>
+                <h5 class="checkout__total" id="checkoutTotal"></h5>
+            </div>
+        </div>
+    </section>
+
+    <div class="popup" id="popup">
+        <div class="popup__popup">
+              <h2 class="popup__title">Gracias!</h2>
+            <p class="popup__text">Su pedido ha sido enviado con éxito. Debería recibir su paquete en breve.</p>
+            <a href="./index.html" class="popup__button">OK</a>
+        </div>
+    </div>
+
     <script src="./src/scripts/checkout.js" type="module"></script>
 </body>
 </html>

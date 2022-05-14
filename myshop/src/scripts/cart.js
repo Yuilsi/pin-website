@@ -44,7 +44,7 @@ function renderProduct(product) {
     <h2 class="product__name">${product.name}</h2>
     <h3 class="product__price">${currencyFormat(product.price)}</h3>
     <button class="product__delete">Eliminar producto</button>
-    <button class="product__buy">Comprar</button>
+   
     `;
 
     //Eliminar producto

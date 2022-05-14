@@ -54,6 +54,7 @@ function renderProduct(item) {
         e.preventDefault(); // evitar que al dar click en el boton, funcione el enlace del padre.
 
         cart.push(item);
+      
         addProductToCart(cart);
 
         if (userLogged) {
