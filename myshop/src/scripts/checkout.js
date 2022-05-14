@@ -67,7 +67,6 @@ checkoutForm.addEventListener("submit", async (e) => {
     const city = checkoutForm.city.value;
     const cellphone = checkoutForm.cell.value;
     const shipping = checkoutForm.shipping.value;
-    const cardNum = checkoutForm.card.value;
     const expiration = checkoutForm.expiration.value;
     const code = checkoutForm.code.value;
 
@@ -83,7 +82,6 @@ checkoutForm.addEventListener("submit", async (e) => {
     //Create payment array
     const paymentInfo = {
         shipping, 
-        cardNum,
         expiration,
         code
     }

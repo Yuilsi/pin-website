@@ -34,8 +34,6 @@ async function removeProduct(productId) {
     loadCart(newCart);
 
 }
-
-
 function renderProduct(product) {
     const productCart = document.createElement("li");
     productCart.className = "product";
@@ -47,7 +45,7 @@ function renderProduct(product) {
    
     `;
 
-    //Eliminar producto
+    //dlete product
     cartSection.appendChild(productCart);
     productCart.addEventListener("click", e => {
          if (e.target.tagName === "BUTTON") {
@@ -56,7 +54,7 @@ function renderProduct(product) {
          }
     })
 
-    //Comprar productos
+    //buy product
    
 
    
