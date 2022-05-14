@@ -6,13 +6,14 @@ import { getMyLocalCart, currencyFormat } from "../utils/index";
 
 const cartSection = document.getElementById("cart");
 const totalSection = document.getElementById("total");
+const checkoutBtn = document.getElementById("checkoutBtn");
 let cart = [];
 
 function loadCart(cart) {
     let total = 0;
     cart.forEach(product => {
         renderProduct(product);
-        total += parseInt(product.price);
+        total += parseInt(product.price)*product.counter
     });
     totalSection.innerText = currencyFormat(total);
 };
@@ -60,6 +61,18 @@ function renderProduct(product) {
 
    
 };
+
+checkoutBtn.addEventListener("click", e => {
+    e.preventDefault();
+    
+    //Check if a user is logged before switching pages
+    if (userLogged == undefined) {
+        alert("Login to continue to checkout");
+    } else {
+        //If logged in, go to checkout
+        window.location.href = "./checkout.html";
+    }
+});
 
 onAuthStateChanged(auth, async (user) => {
     if (user) {

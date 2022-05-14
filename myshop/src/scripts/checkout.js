@@ -1,10 +1,10 @@
 import { auth, db } from "./app";
 import { onAuthStateChanged } from "firebase/auth";
-import { getFirebaseCart, createFirebaseCart } from "./functions/cart";
-import { addProductToCart } from "../utils";
+import { getFirebaseCart } from "./functions/cart";
 import { getMyLocalCart, currencyFormat } from "../utils/index";
 
-
+const checkoutForm = document.getElementById("checkoutForm");
+const orderSection = document.getElementById("checkoutOrder");
 const checkoutTotal = document.getElementById("checkoutTotal");
 let cart = [];
 
@@ -48,17 +48,6 @@ function renderProduct(product) {
 checkoutForm.addEventListener("change", e => {
     finalTotal = total;
 
-    if (checkoutForm.shipping.value == "standard") {
-        shippingPrice = 6;
-    }
-
-    if (checkoutForm.shipping.value == "expedited") {
-        shippingPrice = 10;
-    }
-
-    if (checkoutForm.shipping.value == "overnight") {
-        shippingPrice = 14;
-    }
 
     //Final order total based on shipping
     finalTotal = total+shippingPrice;
