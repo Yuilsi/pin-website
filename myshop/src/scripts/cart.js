@@ -14,10 +14,9 @@ function loadCart(cart) {
         renderProduct(product);
         total += parseInt(product.price);
     });
-
     totalSection.innerText = currencyFormat(total);
 };
-
+console.log ("estoy")
 async function removeProduct(productId) {
     const newCart = cart.filter(product => product.id !== productId);
     
@@ -44,16 +43,22 @@ function renderProduct(product) {
     <h2 class="product__name">${product.name}</h2>
     <h3 class="product__price">${currencyFormat(product.price)}</h3>
     <button class="product__delete">Eliminar producto</button>
+    <button class="product__buy">Comprar</button>
     `;
 
+    //Eliminar producto
     cartSection.appendChild(productCart);
-
     productCart.addEventListener("click", e => {
          if (e.target.tagName === "BUTTON") {
              console.log("remove it!");
              removeProduct(product.id);
          }
     })
+
+    //Comprar productos
+   
+
+   
 };
 
 onAuthStateChanged(auth, async (user) => {
