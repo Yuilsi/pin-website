@@ -32,25 +32,27 @@ function renderProduct(item) {
 
     const isProductAddedToCart = cart.some((productCart) => productCart.id === item.id);
 
-    const productButtonCart = isProductAddedToCart ?
+  /*   const productButtonCart = isProductAddedToCart ?
     '<button class="product__cart" disabled>Producto añadido</button>' :
     '<button class="product__cart">Añadir al carrito</button>';
-
+ */
     product.innerHTML = `
     <img src="${coverImage}" alt="" class="product__image">
-    <div class="product__info">
+    <div>
         <p class="product__category">${item.category}</p> 
         <h2 class="product__name">${item.name}</h2>
+        <div class="product__bottom">
         <h3 class="product__price">${currencyFormat(item.price)}</h3>
-        ${productButtonCart}
-        <p class="bag__info">Cantidad: ${product.counter}</p>
+        </div>
+        <button class="product__cart">Agregar al carrito</button>
     </div>
+   
     `;
 
     productSection.appendChild(product);
 
     const productCartButton = product.querySelector(".product__cart");
-
+ 
     productCartButton.addEventListener("click", async (e) => {
         e.preventDefault(); // evitar que al dar click en el boton, funcione el enlace del padre.
         const currentProductIsAdded = cart.find(product => product.id === item.id);
