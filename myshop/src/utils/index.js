@@ -2,6 +2,10 @@ async function addProductToCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
 };
 
+async function subtractProductToCart(cart) {
+    window.localStorage.removeItem('Cart');
+};
+
 function getMyLocalCart() {
     const myCart = localStorage.getItem("cart");
     return myCart ? JSON.parse(myCart) : [];
@@ -18,5 +22,6 @@ function currencyFormat(price) {
 export {
     addProductToCart,
     getMyLocalCart,
-    currencyFormat
+    currencyFormat,
+    subtractProductToCart
 }

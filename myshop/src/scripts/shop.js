@@ -2,7 +2,7 @@ import { db, auth } from "./app";
 import { onAuthStateChanged } from "firebase/auth";
 import { getProducts } from "./functions/products";
 import { createFirebaseCart, getFirebaseCart  } from "./functions/cart";
-import { addProductToCart, getMyLocalCart, currencyFormat } from "../utils";
+import { addProductToCart,subtractProductToCart, getMyLocalCart, currencyFormat } from "../utils";
 
 const productSection = document.getElementById("products");
 const categoryFilter = document.getElementById("category");
@@ -37,6 +37,7 @@ function renderProduct(item) {
     '<button class="product__cart">Añadir al carrito</button>';
  */
 
+    
    /*  const brnAccion = e => {
         console.log(e.target)
         //accion de aumentar
@@ -44,6 +45,9 @@ function renderProduct(item) {
 
         }
     } */
+
+
+
     product.innerHTML = `
     <img src="${coverImage}" alt="" class="product__image">
     <div>
@@ -53,6 +57,8 @@ function renderProduct(item) {
         <h3 class="product__price">${currencyFormat(item.price)}</h3>
         </div>
         <button class="product__cart">Agregar al carrito</button>
+        <button class="product__subtract">restar</button>
+       
     </div>
    
     `;
@@ -87,7 +93,39 @@ function renderProduct(item) {
       //  productCartButton.innerText = "Producto añadido";
 
     });
+
+
+    const subtractProduct = product.querySelector(".product__subtract");
+    subtractProduct.addEventListener("click", async (e) => {
+        e.preventDefault(); // evitar que al dar click en el boton, funcione el enlace del padre.
+        const currentProductSubtract = cart.find(product => product.id === item.id);
+
+        const productToSubtract = {
+            ...item,
+            counter: (currentProductSubtract) ? currentProductSubtract.counter - 1 : 1,
+        }
+
+        if (currentProductSubtract) {
+            const indexElement = cart.findIndex(product => product.id === item.id);
+            cart[indexElement] = productToSubtract;
+        } else {
+            cart.splice(productToSubtract);
+        }
+
+        subtractProductToCart(cart);
+
+        if (userLogged) {
+            await createFirebaseCart(db, userLogged.uid, cart);
+        }
+
+     //   productCartButton.setAttribute("disabled", true);
+      //  productCartButton.innerText = "Producto añadido";
+
+    });
 }
+
+     
+     
 
 function filterBy(){
     const newCategory = categoryFilter.value;

@@ -7,8 +7,9 @@ import { getMyLocalCart, addProductToCart, currencyFormat } from "../utils";
 const productInfoSection = document.getElementById("productInfo");
 const productAssetsSection = document.getElementById("productAssets");
 
-let userLogged = undefined;
+
 let cart = [];
+let userLogged = undefined;
 
 function getParam(param) {
     const url = window.location.search;
@@ -18,6 +19,7 @@ function getParam(param) {
 }
 
 async function loadProduct() {
+    let total = 0;
     const productId = getParam("id"); // http://localhost:1234/product.html?id=TXQ9Wf1GIoAOJLkIEMYo&age=20
     const data = await getProduct(productId);
     const product = {
@@ -26,6 +28,8 @@ async function loadProduct() {
     }
     
     renderProduct(product);
+    total += parseInt(product.price)*product.counter
+    
 }
 
 function renderProduct(product) {
@@ -40,10 +44,11 @@ function renderProduct(product) {
 
     productInfoSection.innerHTML = `
     <h1 class="product__name">${product.name}</h1>
+ 
     <p class="product__description">${product.description}</p>
     <h3 class="product__price">${currencyFormat(product.price)}</h3>
     ${productButtonCart}
-    <p class="bag__info">Cantidad: ${product.counter}</p>`;
+    <p class="product__info">Cantidad: ${product.counter}</p>`;
 
     if (product.images.length > 1) {
         createGallery(product.images);
@@ -51,7 +56,7 @@ function renderProduct(product) {
 
     const productCartButton = document.querySelector(".product__cart");
 
-    let counter = 0;
+    
     
     /* productCartButton.addEventListener("click", e => {
         cart.push(product);

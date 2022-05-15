@@ -46,11 +46,13 @@ function renderProduct(product) {
     <h2 class="product__name">${product.name}</h2>
     <h3 class="product__price">${currencyFormat(product.price)}</h3>
     <button class="product__delete">Eliminar producto</button>
-    <p class="bag__info">Cantidad: ${product.counter}</p>
+    <p class="cart__info">Cantidad: ${product.counter}</p>
+    <button class="product__subtract">restar</button>
     `
     ;
 
     //dlete product
+   
     cartSection.appendChild(productCart);
     productCart.addEventListener("click", e => {
          if (e.target.tagName === "BUTTON") {
@@ -59,11 +61,17 @@ function renderProduct(product) {
          }
     })
 
-    //buy product
    
 
-   
+    
+
+    
 };
+
+
+
+
+
 
 checkoutBtn.addEventListener("click", e => {
     e.preventDefault();
