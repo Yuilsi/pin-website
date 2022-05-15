@@ -42,14 +42,18 @@ function renderProduct(product) {
     <h1 class="product__name">${product.name}</h1>
     <p class="product__description">${product.description}</p>
     <h3 class="product__price">${currencyFormat(product.price)}</h3>
-    ${productButtonCart}`;
+    ${productButtonCart}
+    <p class="bag__info">Cantidad: ${product.counter}</p>`;
 
     if (product.images.length > 1) {
         createGallery(product.images);
     }
 
     const productCartButton = document.querySelector(".product__cart");
-    productCartButton.addEventListener("click", e => {
+
+    let counter = 0;
+    
+    /* productCartButton.addEventListener("click", e => {
         cart.push(product);
 
         addProductToCart(cart);
@@ -62,6 +66,32 @@ function renderProduct(product) {
         productCartButton.innerText = "Producto añadido";
     });
 }
+ */
+
+productCartButton.addEventListener("click", async (e) => {
+    const currentProductIsAdded = bag.find(productArray => productArray.id === product.id);
+
+    const productToAdd = {
+        ...product,
+        counter: (currentProductIsAdded) ? currentProductIsAdded.counter + 1 : 1,
+    }
+
+    if (currentProductIsAdded) {
+        const indexElement = bag.findIndex(product => product.id === product.id);
+        bag[indexElement] = productToAdd;
+    } else {
+        cart.push(productToAdd);
+    }
+
+    addProductToCart(cart);
+
+    if (userLogged) {
+        await createFirebaseCart(db, userLogged.uid, bag);
+    }
+});
+
+}
+
 
 function createGallery(images) {
     const mainImage = document.getElementById("mainImage");

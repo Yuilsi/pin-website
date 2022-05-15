@@ -42,12 +42,12 @@ function renderProduct(product) {
     productCart.className = "product";
     productCart.innerHTML = `
     <img src="${product.images[0]}" class="product__image">
-    <div class="bag__infosection">
+   
     <h2 class="product__name">${product.name}</h2>
     <h3 class="product__price">${currencyFormat(product.price)}</h3>
     <button class="product__delete">Eliminar producto</button>
-    <p class="bag__info">Quantity: ${product.counter}</p>
-    </div>`
+    <p class="bag__info">Cantidad: ${product.counter}</p>
+    `
     ;
 
     //dlete product

@@ -43,6 +43,7 @@ function renderProduct(item) {
         <h2 class="product__name">${item.name}</h2>
         <h3 class="product__price">${currencyFormat(item.price)}</h3>
         ${productButtonCart}
+        <p class="bag__info">Cantidad: ${product.counter}</p>
     </div>
     `;
 
@@ -52,17 +53,28 @@ function renderProduct(item) {
 
     productCartButton.addEventListener("click", async (e) => {
         e.preventDefault(); // evitar que al dar click en el boton, funcione el enlace del padre.
+        const currentProductIsAdded = cart.find(product => product.id === item.id);
 
-        cart.push(item);
-      
+        const productToAdd = {
+            ...item,
+            counter: (currentProductIsAdded) ? currentProductIsAdded.counter + 1 : 1,
+        }
+
+        if (currentProductIsAdded) {
+            const indexElement = cart.findIndex(product => product.id === item.id);
+            cart[indexElement] = productToAdd;
+        } else {
+            cart.push(productToAdd);
+        }
+
         addProductToCart(cart);
 
         if (userLogged) {
             await createFirebaseCart(db, userLogged.uid, cart);
         }
 
-        productCartButton.setAttribute("disabled", true);
-        productCartButton.innerText = "Producto añadido";
+     //   productCartButton.setAttribute("disabled", true);
+      //  productCartButton.innerText = "Producto añadido";
 
     });
 }
