@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="./css/cart.scss">
 </head>
 <body>
-    <ul class="cart" id="cart">
-    </ul>
-    <div id="total"></div>
-    <div  class="buy" id="finalBuy">
        
-    </div>
-    <div>
-        <a class="total__checkout" id="checkoutBtn">Comprar</a>
-    </div>
+    <section class="container">
+            <h2 class="container__title">Carrito de compra</h2>
+            <ul class="cart" id="cart"></ul>
+            <div class="total">
+                <div class="total__first">
+                    <h2 class="total__title">Total:</h2>
+                    <h2 class="total__total" id="totalSection">0</h2>
+                </div>
+                <div>
+                    <a class="total__checkout" id="checkoutBtn">Comprar</a>
+                </div>
+            </div>
+        </section>
 
     <script src="./src/scripts/cart.js" type="module"></script>
 </body>

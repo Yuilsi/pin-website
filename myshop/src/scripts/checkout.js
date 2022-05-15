@@ -123,7 +123,22 @@ onAuthStateChanged(auth, async (user) => {
 
 
  
+ /*  emailjs.sendForm(service_id, template_id, myform[0])
+  .then(() => {
+      
+      document.querySelector('#loaders').appendChild(check);
+
+      setTimeout(() => {
+          cart.vaciarLocalStorage();
+          check.remove();
+          window.location = "index.html";
+      }, 2000);
 
 
+  }, (err) => {
+      alert("Error al enviar el email\r\n Response:\n " + JSON.stringify(err));
+      // myform.find("button").text("Send");
+  });
+ */
 
 

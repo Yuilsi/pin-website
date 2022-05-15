@@ -18,7 +18,18 @@ async function getFirebaseCart(db, userId) {
     return (result) ? result.cart : [];
 }
 
+
+async function changeCounter(db, userId, counterValue){
+    try {
+        const productRef = doc(db, "cart", userId);
+        await updateDoc(productRef, { counter: counterValue});
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export {
     createFirebaseCart,
-    getFirebaseCart
+    getFirebaseCart,
+    changeCounter
 }
