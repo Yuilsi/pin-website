@@ -8,8 +8,10 @@ const checkoutForm = document.getElementById("checkoutForm");
 const orderSection = document.getElementById("checkoutOrder");
 const checkoutTotal = document.getElementById("checkoutTotal");
 let cart = [];
+let total= 0;
 
 function loadCart(cart) {
+    total =0;
     cart.forEach(product => {
         const { name, price } = product;
         const orderProduct = {
@@ -17,8 +19,6 @@ function loadCart(cart) {
             price
         }
 
-        //Add products in bag to order and push to array
-        order.push(orderProduct);
 
         //Add total of products
         total += parseInt(product.price)*product.counter;
@@ -39,7 +39,6 @@ function renderProduct(product) {
         <img src="${product.images[0]}" alt="" class="order__img">
         <div class="order__infosection">
             <h3 class="order__name">${product.name}</h3>
-            <p class="order__info">${product.color.name.toUpperCase()}</p>
             <p class="order__info">${currencyFormat(product.price)}</p>
         </div>`;
 
@@ -61,19 +60,15 @@ checkoutForm.addEventListener("submit", async (e) => {
     console.log("clicked");
 
     //All the checkout inputs
-    const firstname = checkoutForm.firstname.value;
-    const lastname = checkoutForm.lastname.value;
+    const name = checkoutForm.firstname.value;
     const address = checkoutForm.address.value;
     const city = checkoutForm.city.value;
     const cellphone = checkoutForm.cell.value;
     const shipping = checkoutForm.shipping.value;
     const expiration = checkoutForm.expiration.value;
-    const code = checkoutForm.code.value;
-
     //Create user array
     const userInfo = {
-       firstname,
-       lastname,
+       name,
        address,
        city, 
        cellphone 
@@ -83,7 +78,7 @@ checkoutForm.addEventListener("submit", async (e) => {
     const paymentInfo = {
         shipping, 
         expiration,
-        code
+       
     }
 
     //Create order object
@@ -99,7 +94,7 @@ checkoutForm.addEventListener("submit", async (e) => {
 
     //Show popup
     popup.classList.add('popup--open');
-    //Delete bag from firestore and local storage
+    //Delete cart from firestore and local storage
     deleteFromBag(db, userLogged.uid);
     deleteMyLocalBag();
 

@@ -5,7 +5,7 @@ import { addProductToCart } from "../utils";
 import { getMyLocalCart, currencyFormat } from "../utils/index";
 
 const cartSection = document.getElementById("cart");
-const totalSection = document.getElementById("total");
+const totalSection = document.getElementById("totalSection");
 const checkoutBtn = document.getElementById("checkoutBtn");
 
 let cart = [];

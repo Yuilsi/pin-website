@@ -17,17 +17,21 @@
             <form action="" id="checkoutForm">
                 <h4 class="checkout__subtitle">Comprador</h4>
               
+                <label for="name" class="checkout__label">Nombre</label>
+                <input type="text" id="name" name="name" class="checkout__input"  required>
+
                 <label for="address" class="checkout__label">Apellido</label>
-                <input type="text" id="address" name="address" class="checkout__input" placeholder="Address" required>
+                <input type="text" id="address" name="address" class="checkout__input"  required>
+    
     
                 <label for="city" class="checkout__label">Ciudad</label>
-                <input type="text" id="city" name="city" class="checkout__input" placeholder="City" required>
+                <input type="text" id="city" name="city" class="checkout__input" required>
     
                 <label for="cell" class="checkout__label">Celular</label>
-                <input type="text" name="cell" placeholder="Cellphone number" id="cell" class="checkout__input" required>
+                <input type="text" name="cell"  id="cell" class="checkout__input" required>
 
                 <label for="email" class="checkout__label">Email</label>
-                <input type="email" name="email" placeholder="Email" id="email" class="checkout__input" required>
+                <input type="email" name="email"  id="email" class="checkout__input" required>
 
     
                 
@@ -40,10 +44,6 @@
                         <input type="month" id="expiration" name="expiration" class="checkout__input checkout__input--column" required>
                     </div>
     
-                    <div class="checkout__subcolumn">
-                        <label for="code" class="checkout__label">Código</label>
-                        <input type="number" id="code" name="code" class="checkout__input checkout__input--column" placeholder="Security code" required>
-                    </div>
                 </div>
     
                 <input type="submit" value="Comprar" class="checkout__submit">

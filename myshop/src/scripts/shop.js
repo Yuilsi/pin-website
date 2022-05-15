@@ -36,6 +36,14 @@ function renderProduct(item) {
     '<button class="product__cart" disabled>Producto añadido</button>' :
     '<button class="product__cart">Añadir al carrito</button>';
  */
+
+   /*  const brnAccion = e => {
+        console.log(e.target)
+        //accion de aumentar
+        if(e.target.classList.contain('btn-info')){
+
+        }
+    } */
     product.innerHTML = `
     <img src="${coverImage}" alt="" class="product__image">
     <div>
