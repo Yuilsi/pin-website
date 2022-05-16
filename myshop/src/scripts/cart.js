@@ -7,6 +7,7 @@ import { getMyLocalCart, currencyFormat } from "../utils/index";
 const cartSection = document.getElementById("cart");
 const totalSection = document.getElementById("totalSection");
 const checkoutBtn = document.getElementById("checkoutBtn");
+/* const deleteAll = document.getElementById("product__delete"); */
 
 let cart = [];
 let userLogged = undefined;
@@ -37,6 +38,30 @@ async function removeProduct(productId) {
     loadCart(newCart);
 
 }
+
+/*  async function removeOneProduct(productId) {
+   const reducedCounter = cart.map(product => {
+       return {
+           ...product,
+           counter:product.id === productId ? product.counter - 1 : product.counter
+       };
+   });
+   const newCart= reducedCounter.filter(product => product.counter > 0);
+    
+    cart = newCart;
+
+    if (userLogged) {
+        await createFirebaseCart(db, userLogged.uid, newCart);
+    }
+
+    addProductToCart(newCart);
+
+    cartSection.innerHTML = "";
+
+    loadCart(newCart);
+
+} */
+ 
 function renderProduct(product) {
     const productCart = document.createElement("li");
     productCart.className = "product";
@@ -47,30 +72,24 @@ function renderProduct(product) {
     <h3 class="product__price">${currencyFormat(product.price)}</h3>
     <button class="product__delete">Eliminar producto</button>
     <p class="cart__info">Cantidad: ${product.counter}</p>
-    <button class="product__subtract">restar</button>
+  
     `
     ;
 
     //dlete product
    
     cartSection.appendChild(productCart);
+
     productCart.addEventListener("click", e => {
          if (e.target.tagName === "BUTTON") {
              console.log("remove it!");
              removeProduct(product.id);
+             /* removeOneProduct(product.id) */
          }
     })
 
-   
 
-    
-
-    
 };
-
-
-
-
 
 
 checkoutBtn.addEventListener("click", e => {

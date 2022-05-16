@@ -57,8 +57,7 @@ function renderProduct(item) {
         <h3 class="product__price">${currencyFormat(item.price)}</h3>
         </div>
         <button class="product__cart">Agregar al carrito</button>
-        <button class="product__subtract">restar</button>
-       
+     
     </div>
    
     `;
@@ -86,6 +85,13 @@ function renderProduct(item) {
         addProductToCart(cart);
 
         if (userLogged) {
+           productCartButton.innerHTML = "producto Añadido";
+           productCartButton.disabled = true ;
+           setTimeout(()=> {
+               productCartButton.innerHTML= "Agregar al carrito";
+               productCartButton.disabled =false;
+           }, 100);
+
             await createFirebaseCart(db, userLogged.uid, cart);
         }
 
@@ -95,33 +101,7 @@ function renderProduct(item) {
     });
 
 
-    const subtractProduct = product.querySelector(".product__subtract");
-    subtractProduct.addEventListener("click", async (e) => {
-        e.preventDefault(); // evitar que al dar click en el boton, funcione el enlace del padre.
-        const currentProductSubtract = cart.find(product => product.id === item.id);
 
-        const productToSubtract = {
-            ...item,
-            counter: (currentProductSubtract) ? currentProductSubtract.counter - 1 : 1,
-        }
-
-        if (currentProductSubtract) {
-            const indexElement = cart.findIndex(product => product.id === item.id);
-            cart[indexElement] = productToSubtract;
-        } else {
-            cart.splice(productToSubtract);
-        }
-
-        subtractProductToCart(cart);
-
-        if (userLogged) {
-            await createFirebaseCart(db, userLogged.uid, cart);
-        }
-
-     //   productCartButton.setAttribute("disabled", true);
-      //  productCartButton.innerText = "Producto añadido";
-
-    });
 }
 
      

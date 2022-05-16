@@ -7,9 +7,9 @@ import { getMyLocalCart, addProductToCart, currencyFormat } from "../utils";
 const productInfoSection = document.getElementById("productInfo");
 const productAssetsSection = document.getElementById("productAssets");
 
-
-let cart = [];
 let userLogged = undefined;
+let products = [];
+let cart = [];
 
 function getParam(param) {
     const url = window.location.search;
@@ -19,17 +19,16 @@ function getParam(param) {
 }
 
 async function loadProduct() {
-    let total = 0;
     const productId = getParam("id"); // http://localhost:1234/product.html?id=TXQ9Wf1GIoAOJLkIEMYo&age=20
+
     const data = await getProduct(productId);
+
     const product = {
         ...data,
         id: productId, // docSnap.id,
     }
-    
+
     renderProduct(product);
-    total += parseInt(product.price)*product.counter
-    
 }
 
 function renderProduct(product) {
@@ -38,65 +37,59 @@ function renderProduct(product) {
 
     const isProductAddedToCart = cart.some((productCart) => productCart.id === product.id);
 
-    const productButtonCart = isProductAddedToCart ?
+    /* const productButtonCart = isProductAddedToCart ?
     '<button class="product__cart" disabled>Producto añadido</button>' :
-    '<button class="product__cart">Añadir al carrito</button>';
+    '<button class="product__cart">Añadir al carrito</button>'; */
 
     productInfoSection.innerHTML = `
     <h1 class="product__name">${product.name}</h1>
- 
     <p class="product__description">${product.description}</p>
-    <h3 class="product__price">${currencyFormat(product.price)}</h3>
-    ${productButtonCart}
-    <p class="product__info">Cantidad: ${product.counter}</p>`;
+    <h3 class="product__price">${currencyFormat(product.price)}</h3> 
+    <button class="product__cart">Añadir al carrito</button>`;
 
     if (product.images.length > 1) {
         createGallery(product.images);
     }
 
     const productCartButton = document.querySelector(".product__cart");
+    productCartButton.addEventListener("click",async (e)=> {
+        e.preventDefault(); // evitar que al dar click en el boton, funcione el enlace del padre.
+        const currentProductIsAdded = cart.find(product => product.id === product.id);
 
-    
-    
-    /* productCartButton.addEventListener("click", e => {
-        cart.push(product);
+        
 
+     /*    const isProductAddedToCart = cart.some((productCart) => productCart.id === product.id); */
+
+        const productToAdd = {
+            ...product,
+            counter: (currentProductIsAdded) ? currentProductIsAdded.counter + 1 : 1,
+        }
+
+        if (currentProductIsAdded) {
+            const indexElement = cart.findIndex(product => product.id === product.id);
+            cart[indexElement] = productToAdd;
+        } else {
+            cart.push(productToAdd);
+        }
+      
+      
+      
         addProductToCart(cart);
 
         if (userLogged) {
+            productCartButton.innerHTML = "producto Añadido";
+            productCartButton.disabled = true ;
+            setTimeout(()=> {
+                productCartButton.innerHTML= "Agregar al carrito";
+                productCartButton.disabled =false;
+            }, 100);
             createFirebaseCart(db, userLogged.uid, cart);
         }
 
-        productCartButton.setAttribute("disabled", true);
-        productCartButton.innerText = "Producto añadido";
+      //  productCartButton.setAttribute("disabled", true);
+      //  productCartButton.innerText = "Producto añadido";
     });
 }
- */
-
-productCartButton.addEventListener("click", async (e) => {
-    const currentProductIsAdded = bag.find(productArray => productArray.id === product.id);
-
-    const productToAdd = {
-        ...product,
-        counter: (currentProductIsAdded) ? currentProductIsAdded.counter + 1 : 1,
-    }
-
-    if (currentProductIsAdded) {
-        const indexElement = bag.findIndex(product => product.id === product.id);
-        bag[indexElement] = productToAdd;
-    } else {
-        cart.push(productToAdd);
-    }
-
-    addProductToCart(cart);
-
-    if (userLogged) {
-        await createFirebaseCart(db, userLogged.uid, bag);
-    }
-});
-
-}
-
 
 function createGallery(images) {
     const mainImage = document.getElementById("mainImage");
@@ -135,7 +128,4 @@ onAuthStateChanged(auth, async (user) => {
 
     loadProduct();
 
-    console.log(loadProduct)
   });
-
-  
