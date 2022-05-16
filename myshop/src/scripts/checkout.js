@@ -29,8 +29,6 @@ function loadCart(cart) {
 };
 console.log ("estoy aqui");
 
-
-
 function renderProduct(product) {
     const orderProduct = document.createElement("div");
     orderProduct.className = "order";
@@ -48,8 +46,6 @@ function renderProduct(product) {
 checkoutForm.addEventListener("change", e => {
     finalTotal = total;
 
-
-    //Final order total based on shipping
     finalTotal = total+shippingPrice;
     shippingText.innerHTML = "Shipping price: " + currencyFormat(shippingPrice);
     checkoutTotal.innerText = finalTotal;
@@ -59,44 +55,19 @@ checkoutForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     console.log("clicked");
 
-    //All the checkout inputs
-    const name = checkoutForm.firstname.value;
-    const address = checkoutForm.address.value;
     const city = checkoutForm.city.value;
     const cellphone = checkoutForm.cell.value;
-    const shipping = checkoutForm.shipping.value;
-    const expiration = checkoutForm.expiration.value;
-    //Create user array
-    const userInfo = {
-       name,
-       address,
-       city, 
-       cellphone 
-    }
-
-    //Create payment array
-    const paymentInfo = {
-        shipping, 
-        expiration,
-       
-    }
-
-    //Create order object
+    
     const orderComplete = {
-        userInfo,
-        paymentInfo,
+        email,
+        city, 
+        cellphone,
+         paymentInfo,
         order,
         finalTotal
     }
 
-    //Add order to firestore database
     await addOrder(db, orderComplete, userLogged.uid);
-
-    //Show popup
-    popup.classList.add('popup--open');
-    //Delete cart from firestore and local storage
-    deleteFromBag(db, userLogged.uid);
-    deleteMyLocalBag();
 
 });
 
