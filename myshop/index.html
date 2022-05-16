@@ -20,38 +20,61 @@
 <body>
     <!---------------------MENU------------------------------>
     <header>
-        <nav class="nav flex">
-            <div class="flex align-items-center">
-                <a href="#" class="logo">
+        <div class="container__menu">
+            <div class="logo">
+                <a href="#" >
                     <img src="./img/logo.png" alt="">
                 </a>
-                <button class="bar-btn"><img src="./img/icons/menu.png" alt=""></button>
+            </div>
+            <div class="menu">
+       <!--  <nav class="nav flex" id="back_menu">
+            <div class="flex align-items-center"> -->
+                <button class="bar-btn" id="btn_menu"><img src="./img/icons/menu.png" alt=""></button>
+               
+                <div id="back_menu"></div>
+                <nav id="nav">
 
-                <ul class= "menu flex align-items-center active">
-                    <li class="menu__item">
+                   <!--  <a href="#"  >
+                        <img   class="iconHome" src="./img/logo.png" alt="">
+                    </a> -->
+
+                <ul class= "menu  active">
+                
+                    <li class="">
                       <a href="./shop.html">Productos</a>  
                     </li>
-                    <li class="menu__item">
+                    <li class="">
                         <a href="#">Favoritos</a> 
                     </li>
-                    <li class="menu__item">
+                    <li class="">
                         <a href="#">Ayuda</a>
                     </li>
+                    <li class="hides">
+                        <a href="#">Carrito</a>
+                    </li>
+                    <li class="singIN">
+                        <a href="#">Iniciar sesión</a>
+                    </li>
                 </ul>
+            </nav>
             </div>
-             <ul class= "menu flex align-items-center">
-                <li class="menu__item">
-                    <button><img src="./img/icons/loupe.png"/></button>
-                </li>
-                <li class="menu__item">
-                    <a href="./cart.html"><img src="./img/icons/shopping_cart.png"/></a>
-                </li>
-                <li class="menu__item">
-                    <button id="open"><img src="./img/login.png"/></button>
-                </li>
-            </ul>
+        </div>
+
+        <ul class= "menuIcons flex align-items-center" >
+           <li class="menu__item">
+               <button><img src="./img/icons/loupe.png"/></button>
+           </li>
+           <li class="menu__item">
+               <a href="./cart.html"><img src="./img/icons/shopping_cart.png"/></a>
+           </li>
+           <li class="menu__item">
+               <button id="open"><img src="./img/login.png"/></button>
+           </li>
+       </ul>
+
             
         </nav>
+    </div>
     </header>
 
     <!---------------------VENTANA MODAL------------------------>

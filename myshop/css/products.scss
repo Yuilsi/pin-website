@@ -1,15 +1,28 @@
+$colorOrange:#F64D33;
+$colorBlue: #010A13;
+$colorBlack: #FFFFFF;
+
+body {
+   background: #010A13;
+}
+
+
 .product {
     display: flex;
    align-items:center;
+   background: #F64D33;
 
    & > div {
        width: 50%;
+       height: 45%;
    }
 
    &__mainImage {
        width: 100%;
        height: 500px;
        object-fit: contain;
+       
+      
    }
 
    &__galllery {
@@ -19,4 +32,8 @@
 
        }
    }
+}
+
+a {
+    color: #FFFFFF;
 }

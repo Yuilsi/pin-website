@@ -1,3 +1,7 @@
+body {
+  background: #010A13;
+}
+
 .product {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5,10 +9,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #F64D33;
 }
 
 .product > div {
   width: 50%;
+  height: 45%;
 }
 
 .product__mainImage {
@@ -22,4 +28,8 @@
   width: 80px;
   cursor: pointer;
 }
-/*# sourceMappingURL=product.css.map */
+
+a {
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=products.css.map */
