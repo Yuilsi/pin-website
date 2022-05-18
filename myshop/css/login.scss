@@ -1,4 +1,9 @@
 * {
+	font-family: 'Karla', sans-serif;
+	padding: 0;
+	margin: 0;
+	text-decoration:none;
+	list-style:none; 
 	box-sizing: border-box;
 }
 $colorOrange:#F64D33;
@@ -12,14 +17,10 @@ body {
 	align-items: center;
 	flex-direction: column;
     font-family: 'Karla', sans-serif;
-	height: 100vh;
+	height: 100%;
 	margin: -20px 0 50px;
 }
-h1 {
-	font-weight: bold;
-	margin: 0;
-    color: #FFFFFF;
-}
+
 h2 {
 	text-align: center;
     color: #FFFFFF;
@@ -32,7 +33,17 @@ p {
 	margin: 20px 0 30px;
 }
 span {
-	font-size: 12px;
+
+	font-size: 13px;
+	margin-top: 15px;
+	margin-bottom: 3px;
+	display: flex;
+	justify-content: flex-start;
+	
+	color: $colorBlack;
+	font-weight: 300;
+	
+	letter-spacing: 1px;
 }
 a {
 	color: rgb(165, 156, 156);
@@ -41,15 +52,15 @@ a {
 	margin: 15px 0;
 }
 button {
-	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border-radius: 10px;
+	 border: 1px solid #FF4B2B; 
+	background-color: #FFFFFF;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
 	letter-spacing: 1px;
-	text-transform: uppercase;
+	
 	transition: transform 80ms ease-in;
 }
 button:active {
@@ -72,23 +83,51 @@ form {
 	height: 100%;
 	text-align: center;
 }
+
 input {
+	display: flex;
+	justify-content: flex-start;
 	background-color: #eee;
 	border: none;
     border-radius: 5px;
 	padding: 12px 15px;
-	margin: 8px 0;
-	width: 100%;
-	width: 70%;
+	margin-top: 10px;
+	width: 300px;
 }
 
+/* .form__checkbox input {
+display: block;
+
+}
+label {
+	display: flex;
+	outline: none;
+	margin-bottom: 10px;
+	color: $colorBlack;
+	font-weight: 400;
+	font-size: 14px;
+} */
+
+.tittle {
+	
+	display: flex;
+	color: $colorOrange;
+	
+	font-weight: bold;
+	font-size: 20px;
+}
 .form__submit input[type="submit"]{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
 		background: $colorOrange;
 		color: $colorBlack;
 		outline: none;
 		border: none;
 		font-weight: 500;
 		cursor: pointer;
+		width: 300px;
 	}
 
 	.form__submit input[type="submit"]:hover {
@@ -225,7 +264,7 @@ input {
 
 
 //-------
-.login {
+/* .login {
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -233,3 +272,4 @@ input {
 	height: 100%;
 	z-index: 1;
 }
+ */

@@ -54,6 +54,7 @@ function renderProduct(item) {
         <p class="product__category">${item.category}</p> 
         <h2 class="product__name">${item.name}</h2>
         <div class="product__bottom">
+        <p class="product__description">${item.description}</p> 
         <h3 class="product__price">${currencyFormat(item.price)}</h3>
         </div>
         <button class="product__cart">Agregar al carrito</button>

@@ -42,6 +42,7 @@ function renderProduct(product) {
     '<button class="product__cart">Añadir al carrito</button>'; */
 
     productInfoSection.innerHTML = `
+    <p class="product__category">${product.category}</p>
     <h1 class="product__name">${product.name}</h1>
     <p class="product__description">${product.description}</p>
     <h3 class="product__price">${currencyFormat(product.price)}</h3> 

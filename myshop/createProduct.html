@@ -8,19 +8,46 @@
     <link rel="stylesheet" type="text/css" href="./css/createProducts.scss">
 </head>
 <body>
-    <form  id="createProductForm">
-        <input type="text" name="name" placeholder="Nombre del produto">
-        <textarea name="description" id="" cols="30" rows="10"></textarea>
-        <input type="number" name="price">
-        <select name="category">
-            <option value="Cuadrados">cuadrados</option>
-            <option value="Plasticos">plasticos</option>
-            <option value="Metalicos">metalicos</option>
-        </select>
-        <input type="file" name="images">
-        <input type="submit" value="crear producto">
+    <section>
+        <div class="imgBx"><img src="./src/scripts/styles/images/loginImage.png"></div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Anadir productos</h2>
+                <form  id="createProductForm">
+                    <div class="inputBx">
+                        <span>Nombre del producto</span>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="inputBx">
+                        <span>Precio</span>
+                        <input type="number" name="price">
+                    </div>
+                    <div class="inputBx">
+                        <span>Categoría</span>
+                        <select name="category">
+                            <option value="Cuadrados">cuadrados</option>
+                            <option value="Plasticos">plasticos</option>
+                            <option value="Metalicos">metalicos</option>
+                        </select>
+                    </div>
+                    <div class="remember">
+                        <input type="file" name="images" >
+                    </div>
+                    <div class="inputBx">
+                        <span>Descripción</span>
+                        <textarea name="description" id="" cols="30" rows="10"></textarea>
+                    </div>  
+                    <div class="inputBx">
+                        <input type="submit" value="crear producto">
+                 </div>
+                 
+                </form>
+            </div>
+        </div>
+    </section>
 
-    </form>
+
+
     <script src="./src/scripts/createProduct.js" type="module"></script>
 </body>
 </html>

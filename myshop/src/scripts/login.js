@@ -24,23 +24,9 @@ window.addEventListener("load", () => {
     }
     const userCreated= await createUser(auth,newUser);
    await addUserToDatabase(db,userCreated.uid,newUser);
-    location.href= "/"
+    location.href= "/index.html"
   console.log(userCreated);
   });
-  
-  /*loginForm.addEventListener("submit", e =>{
-    e.preventDefault();
-    const email = loginForm.email.value;
-    const password = loginForm.password.value;
-    login(auth,email,password);
-    if(user.isAdmin){
-      location.href= "./create-product.html";
-    }else{
-      location.href= "./products"
-    }
-  
-  });
-  */
    //--------------------------LOGIN--------------------------------
   
   let user;
@@ -58,7 +44,7 @@ window.addEventListener("load", () => {
       if(userInfo.data().isAdmin){
         location.href= "/createProduct.html";
       }else{
-        location.href= "/"
+        location.href= "/index.html"
       }
     } catch(e) {
       console.error(e);

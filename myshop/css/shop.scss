@@ -15,9 +15,14 @@ $colorBlack: #FFFFFF;
 
 body {
     background: $colorBlue;
-    margin: 40px;
+    margin-right: 30px;
+    margin-left: 30px;
+
 }
 
+ header {
+     position: absolute;
+ }
 
 .products {
     display: flex;
@@ -140,10 +145,13 @@ body {
     
   }
 
+ 
   .filter {
-    padding-right: 40px;
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  
   
   }
  select { 
@@ -160,14 +168,14 @@ body {
 
 
 
-
   @media all and (max-width: 420px) {
     html, body{
         margin-left: 0px;
         margin-right: 0px;
     }
 
-    .header{
+   
+    section{
         padding: 20px 0px;
 
         &__logo, &__list, & nav{

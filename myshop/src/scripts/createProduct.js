@@ -33,7 +33,7 @@ const newProduct = {
   description,
   price,
   category,
-   images: gallery, 
+  images: gallery, 
 }
 
 await addProduct(db,newProduct);
