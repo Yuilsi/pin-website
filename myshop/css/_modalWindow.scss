@@ -2,8 +2,9 @@
 
 
 .modal-container {
-    position: relative; 
-  display: none; 
+  position: relative; 
+  display: none;
+   
   /*  display: flex;
    justify-content: flex-end;
    opacity: 0;  
@@ -33,7 +34,7 @@
  .modal {
  
   position: absolute;
-  right: 0.5%;
+  right: 1.5%;
   z-index: 1;
   padding: 5px 10px;
   color: #575555d5;
@@ -51,20 +52,23 @@
  }
 
  .button__modal {
-  display: block;
+ display: block;
  border: 0;
  border-radius: 5px;
- padding: 7px;
- margin-top: 50px;
+ padding: 10px;
+ align-items: center;
+ margin-top: 5px;
+ margin-bottom: 5px;
  -webkit-box-shadow: 0 2px 4px #00000033;
  box-shadow: 0 2px 4px #00000033;
  font-weight: 200;
  color: #ffffff;
- width: 200px;
+ width: 150px;
  height: 38px;
 
  &--login {
   background-color: #F64D33;
+ 
   }
 
  &--signUp {
