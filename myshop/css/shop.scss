@@ -38,7 +38,7 @@ $colorBlack: #FFFFFF;
 .product {
     width: 200px;
     display: block;
-    background: #ffffff;
+    background: #ffffff31;
     border-radius: 10px;
    
     margin: 20px  20px 10px 20px;
@@ -66,6 +66,7 @@ $colorBlack: #FFFFFF;
         color:$colorBlue;
         font-size: 1.125em;
         font-weight: bold;
+        color: #FFFFFF;
         
     }
 
@@ -75,6 +76,7 @@ $colorBlack: #FFFFFF;
         color:$colorBlue;
         font-weight: 300;
         font-size: 0.8em;
+        color: #FFFFFF;
         
     }
 
@@ -88,7 +90,7 @@ $colorBlack: #FFFFFF;
         box-shadow: 0 2px 4px #00000033;
         font-weight: 200;
         background: $colorOrange;
-        color: #FFFFFF;
+        color:#FFFFFF;
         text-align: center;
         cursor: pointer;
         width: 150px;
