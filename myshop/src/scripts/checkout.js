@@ -1,14 +1,18 @@
 import { auth, db } from "./app";
 import { onAuthStateChanged } from "firebase/auth";
 import { getFirebaseCart } from "./functions/cart";
-import { getMyLocalCart, currencyFormat } from "../utils/index";
+import { currencyFormat } from "../utils/index";
 import { addOrder } from "./functions/checkout";
 
-const checkoutForm = document.getElementById("checkoutForm");
-const orderSection = document.getElementById("checkoutOrder");
+const dataForm = document.getElementById("data");
+const finalOrder = document.getElementById("finalOrder");
 const checkoutTotal = document.getElementById("checkoutTotal");
+
 let cart = [];
+
+let userLogged = undefined;
 let total= 0;
+let order = [];
 
 function loadCart(cart) {
     total =0;
@@ -17,17 +21,17 @@ function loadCart(cart) {
         const orderProduct = {
             name,
             price
-        }
+        } 
+        order.push(orderProduct);
 
-
-        //Add total of products
+        
         total += parseInt(product.price)*product.counter;
 
         renderProduct(product);
         checkoutTotal.innerText = currencyFormat(total);
     });
 };
-console.log ("estoy aqui");
+
 
 function renderProduct(product) {
     const orderProduct = document.createElement("div");
@@ -40,24 +44,21 @@ function renderProduct(product) {
             <p class="order__info">${currencyFormat(product.price)}</p>
         </div>`;
 
-    orderSection.appendChild(orderProduct);
+    finalOrder.appendChild(orderProduct);
 }
 
-checkoutForm.addEventListener("change", e => {
-    finalTotal = total;
-
-    finalTotal = total+shippingPrice;
-    shippingText.innerHTML = "Shipping price: " + currencyFormat(shippingPrice);
-    checkoutTotal.innerText = finalTotal;
+dataForm.addEventListener("change", e => {
+   
+    checkoutTotal.innerText = total;
 });
 
-checkoutForm.addEventListener("submit", async (e) => {
+dataForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     console.log("clicked");
 
-    const city = checkoutForm.city.value;
-    const cellphone = checkoutForm.cell.value;
-    
+    const city = dataForm.city.value;
+    const cellphone = dataForm.cell.value;
+    const email= dataForm.email.value;
     const orderComplete = {
         email,
         city, 
@@ -70,19 +71,17 @@ checkoutForm.addEventListener("submit", async (e) => {
 
 });
 
+
+
 onAuthStateChanged(auth, async (user) => {
     if (user) {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
       userLogged = user;
       cart = await getFirebaseCart(db, userLogged.uid);
-    } else {
-        cart = getMyLocalCart();
-      // User is signed out
-      // ...
-    }
+    } 
 
-    loadCart(cart);
+     loadCart(cart); 
 
   });
 

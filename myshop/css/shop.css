@@ -95,8 +95,13 @@ body {
   background: #F64D33;
   color: #FFFFFF;
   text-align: center;
+  cursor: pointer;
   width: 150px;
   height: 38px;
+}
+
+.product__cart:hover {
+  background: #b87e77;
 }
 
 .loader {

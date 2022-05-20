@@ -107,6 +107,10 @@ checkoutBtn.addEventListener("click", e => {
     }
 });
 
+cart = getMyLocalCart();
+loadCart(cart);
+
+
 onAuthStateChanged(auth, async (user) => {
     if (user) {
       // User is signed in, see docs for a list of available properties

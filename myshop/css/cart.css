@@ -42,6 +42,7 @@ body {
   background: #ffffff31;
   border-radius: 10px;
   padding: 20px 35px 20px 20px;
+  margin: 10px 0em 10px 0;
 }
 
 .cart .product__image {
@@ -71,6 +72,11 @@ body {
   text-align: center;
   width: 100px;
   height: 38px;
+  cursor: pointer;
+}
+
+.cart .product__delete:hover {
+  background: #d3d0d0;
 }
 
 .total__first {
@@ -121,5 +127,10 @@ body {
   text-align: center;
   width: 300px;
   height: 38px;
+  cursor: pointer;
+}
+
+.total__checkout:hover {
+  background: #b87e77;
 }
 /*# sourceMappingURL=cart.css.map */
