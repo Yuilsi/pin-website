@@ -6,40 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de pedido</title>
     <link rel="stylesheet" href="./css/checkout.scss">
+    <link rel="stylesheet" type="text/css" href="./css/home.scss">
 
 </head>
 <body>
    
-    <section class="checkout">
-        <div class="checkout__buy">
-            <h2 class="checkout__title">Tu pedido</h2>
-    
-            <form  id="data">
-                <label for="email" class="data__label">Email</label>
-                <input type="email" name="email"  id="email" class="data__input" required>
+    <header>
+        <div class="container__menu">
+            <div class="logo">
+                <a href="#" >
+                    <img src="./img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="menu">
+                <button class="bar-btn" id="btn_menu"><img src="./img/icons/menu.png" alt=""></button>
                
-                <label for="city" class="data__label">Ciudad</label>
-                <input type="text" id="city" name="city" class="data__input" required>
-    
-                <label for="cell" class="data__label">Dirección</label>
-                <input type="text" name="directión"  id="direction" class="data__input" required>
-    
-                <h4 class="data__subtitle">Informacion de pago</h4>
-              
-            </form>
-        </div>
+                <div id="back_menu"></div>
+                <nav id="nav">
+                    <h3 class="nav__tittle hamburgerMenu">Menú</h3>
+                <ul class= "menu  active">
+                      
+                    <li>
+                        <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/products.png" alt="">
+                        <a href="./shop.html">Productos</a>  
+                    </li>
+                    <li >
+                         <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/favorite_products.png"  alt="">
+                        <a href="#">Favoritos</a> 
+                    </li>
+                    <li class="hamburgerMenu">
+                        <img  src="./img/icons/Menu-Hamburguesa/Icon/Cart.png" alt="">
+                        <a href="./cart.html">Carrito </a>
+                    </li>
+                    
+                    <li>
+                        <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/help.png" alt="">
+                        <a href="#">Ayuda</a>
+                    </li>
+                </ul>
+                <div class="contentButtons ">
 
-        <div class="checkout__order" id="finalOrder">
-            <h4 class="checkout__title">Tus compras</h4>
-            <div class="checkout__totalBox">
-                <h5 class="checkout__total">Total: </h5>
-                <h5 class="checkout__total" id="checkoutTotal"></h5>
+                    <a class="singIN hamburgerMenu" href="./login.html">Iniciar sesión</a>
+                    <a class="singUP hamburgerMenu" href="./login.html" id="signup">Registrarse</a>
+                </div>
+            </nav>
+            
             </div>
         </div>
+
+        <ul class= "menuIcons flex align-items-center" >
+           <li class="menu__item">
+               <button><img src="./img/icons/loupe.png"/></button>
+           </li>
+           <li class="menu__item">
+               <a href="./cart.html"><img src="./img/icons/shopping_cart.png"/></a>
+           </li>
+           <li class="menu__item">
+               <button id="open"><img src="./img/login.png"/></button>
+           </li>
+       </ul>
+
+            
+        </nav>
+    </div>
+    </header>
+
+    <!---------------------VENTANA MODAL------------------------>
+      <div id="modal_container" class="modal-container" >
+        <div class="modal" id="windous">
+
+          <div>
+              <a href="./login.html" class="button__modal button__modal--login" id="logIn">Iniciar sesión</a>
+              <h4>¿Eres nuevo?</h4>
+              <a href="./login.html" class="button__modal button__modal--signUp" id="signup">Registrarse</a>
+              <div class="arrow up"></div>
+            </div>
+        </div>
+      </div>
+    
+
+
+    <section class="checkout">
+        <div class="checkout__buy">
+            <h2 class="checkout__title">Realiza tu pedido</h2>
+    
+            <h4 class="checkout__subtitle">Datos personales</h4>
+            <form  id="data" class="data">
+                <div class="item">
+                    <span class="data__label">Email</span>
+                    <input type="email" name="email"  id="email" class="data__input" required>
+                </div>
+                <div class="item">
+                    <span class="data__label">Ciudad</span>
+                    <input type="text" id="city" name="city" class="data__input" required>
+                </div>
+                <div class="item">
+                    <span class="data__label">Dirección</span>
+                    <input type="text" name="directión"  id="direction" class="data__input" required>
+                </div>     
+            </form>
+            <div class="character">
+                <img src="./img/decoration/personaje 1.png" alt="">
+            </div>
+        </div> 
+        <div class="checkout__order" id="finalOrder">
+            <h4 class="checkout__subtitle">Informacion de pedido</h4>
+         
+            <div class="checkout__totalBox">
+                <h5 class="checkout__total">Total:</h5>
+                <h5 class="checkout__total--number" id="checkoutTotal"></h5>
+            </div>
+
+        </div>
+        <div class="check">
+        <input type="submit" value="Hacer pedido" class="checkout__submit">
+        <div>
     </section>
-
-    <input type="submit" value="Hacer pedido" class="checkout__submit">
-
+    <script src="./src/scripts/index.js" type="module"></script>
     <script src="./src/scripts/checkout.js" type="module"></script>
 </body>
 </html>

@@ -107,8 +107,6 @@ checkoutBtn.addEventListener("click", e => {
     }
 });
 
-cart = getMyLocalCart();
-loadCart(cart);
 
 
 onAuthStateChanged(auth, async (user) => {

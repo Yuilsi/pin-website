@@ -35,14 +35,19 @@ function loadCart(cart) {
 
 function renderProduct(product) {
     const orderProduct = document.createElement("div");
-    orderProduct.className = "order";
+    orderProduct.className = "shopping";
 
     orderProduct.innerHTML = `
-        <img src="${product.images[0]}" alt="" class="order__img">
-        <div class="order__infosection">
-            <h3 class="order__name">${product.name}</h3>
-            <p class="order__info">${currencyFormat(product.price)}</p>
-        </div>`;
+        <img src="${product.images[0]}" alt="" class="shopping__image">
+        
+            <h3 class="shopping__name">${product.name}</h3>
+            <h3 class="shopping__counter"> ${product.counter}</h3>
+            <h3 class="shopping__info">${currencyFormat(product.price)}</h3>
+            <div>
+    
+            <button class="shopping__delete">Eliminar</button>
+         </div>
+        `;
 
     finalOrder.appendChild(orderProduct);
 }
