@@ -11,29 +11,26 @@
 <body>
    
     <section class="checkout">
-        <div class="checkout__checkout">
+        <div class="checkout__buy">
             <h2 class="checkout__title">Tu pedido</h2>
     
-            <form action="" id="checkoutForm">
-                <label for="email" class="checkout__label">Email</label>
-                <input type="email" name="email"  id="email" class="checkout__input" required>
+            <form  id="data">
+                <label for="email" class="data__label">Email</label>
+                <input type="email" name="email"  id="email" class="data__input" required>
                
-                <label for="city" class="checkout__label">Ciudad</label>
-                <input type="text" id="city" name="city" class="checkout__input" required>
+                <label for="city" class="data__label">Ciudad</label>
+                <input type="text" id="city" name="city" class="data__input" required>
     
-                <label for="cell" class="checkout__label">Dirección</label>
-                <input type="text" name="directión"  id="direction" class="checkout__input" required>
+                <label for="cell" class="data__label">Dirección</label>
+                <input type="text" name="directión"  id="direction" class="data__input" required>
     
-                <h4 class="checkout__subtitle checkout__subtitle--after">Informacion de pago</h4>
-                <div class="checkout__names">
-  
-                </div>
+                <h4 class="data__subtitle">Informacion de pago</h4>
               
             </form>
         </div>
 
         <div class="checkout__order" id="checkoutOrder">
-            <h4 class="checkout__title checkout__title--order">Tus compras</h4>
+            <h4 class="checkout__title">Tus compras</h4>
             <div class="checkout__totalBox">
                 <h5 class="checkout__total">Total: </h5>
                 <h5 class="checkout__total" id="checkoutTotal"></h5>

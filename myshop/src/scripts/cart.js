@@ -70,9 +70,12 @@ function renderProduct(product) {
    
     <h2 class="product__name">${product.name}</h2>
     <h3 class="product__price">${currencyFormat(product.price)}</h3>
-    <button class="product__delete">Eliminar producto</button>
-    <p class="cart__info">Cantidad: ${product.counter}</p>
-  
+    
+    <h3 class="cart__info"> ${product.counter}</h3>
+    <div>
+    
+    <button class="product__delete">Eliminar</button>
+ </div>
     `
     ;
 

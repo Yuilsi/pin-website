@@ -61,8 +61,7 @@ checkoutForm.addEventListener("submit", async (e) => {
     const orderComplete = {
         email,
         city, 
-        cellphone,
-         paymentInfo,
+        cellphone,  
         order,
         finalTotal
     }
