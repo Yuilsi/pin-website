@@ -59,6 +59,7 @@ body {
   font-weight: 200;
   font-size: 18px;
   color: #FFFFFF;
+  width: 180px;
 }
 
 .cart .product__delete {
@@ -95,6 +96,7 @@ body {
 .total__title {
   font-weight: 100;
   font-size: 20px;
+  margin-right: 5px;
 }
 
 .total__total {

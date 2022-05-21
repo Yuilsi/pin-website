@@ -34,7 +34,7 @@ body {
 .product {
   width: 200px;
   display: block;
-  background: #ffffff;
+  background: #ffffff31;
   border-radius: 10px;
   margin: 20px  20px 10px 20px;
 }
@@ -67,6 +67,7 @@ body {
   color: #010A13;
   font-size: 1.125em;
   font-weight: bold;
+  color: #FFFFFF;
 }
 
 .product__category {
@@ -77,6 +78,7 @@ body {
   color: #010A13;
   font-weight: 300;
   font-size: 0.8em;
+  color: #FFFFFF;
 }
 
 .product__cart {
