@@ -37,10 +37,6 @@ function renderProduct(product) {
 
     const isProductAddedToCart = cart.some((productCart) => productCart.id === product.id);
 
-    /* const productButtonCart = isProductAddedToCart ?
-    '<button class="product__cart" disabled>Producto añadido</button>' :
-    '<button class="product__cart">Añadir al carrito</button>'; */
-
     productInfoSection.innerHTML = `
     <h1 class="product__name">${product.name}</h1>
     <h2 class="product__category">${product.category}</h2>
@@ -57,9 +53,6 @@ function renderProduct(product) {
         e.preventDefault(); // evitar que al dar click en el boton, funcione el enlace del padre.
         const currentProductIsAdded = cart.find(product => product.id === product.id);
 
-        
-
-     /*    const isProductAddedToCart = cart.some((productCart) => productCart.id === product.id); */
 
         const productToAdd = {
             ...product,

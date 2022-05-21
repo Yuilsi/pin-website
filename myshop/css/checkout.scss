@@ -1,6 +1,12 @@
+/* Variables */
 $colorOrange:#F64D33;
-$colorBlue: #010A13;
-$colorBlack: #FFFFFF;
+$colorBlue: #131B23;
+$colorWhite: #FFFFFF;
+$lightGray: #ffffff31;
+$colorDetectedBtn:#fa614a;
+$azulBtn:#253F5D;
+$detectDeleteBtn:#d3d0d0;
+
 
 * {
     font-family: 'Karla', sans-serif;
@@ -15,160 +21,131 @@ $colorBlack: #FFFFFF;
     body {
         background: $colorBlue;
         margin: 2px 30px 0 20px;
-    
     }
-
+    
     header {
         position: fixed;
         padding: 2rem 0;
         left: 0;
         top: 0;
-        
     }
-
-    .checkout{
-        padding: 0px 70px; 
+    
+    .checkout {
+        padding: 0px 70px;
         &__title {
             margin-top: 120px;
             margin-bottom: 30px;
             font-size: 25px;
-            color: #F64D33;
+            color: $colorOrange;
             display: flex;
-           justify-content: center;
+            justify-content: center;
         }
-        &__subtitle{
+        &__subtitle {
             margin-top: 50px;
             margin-bottom: 10px;
             font-size: 18px;
-            color: #FFFFFF;
+            color: $colorWhite;
         }
-
-       &__totalBox{
+        &__totalBox {
             display: flex;
             justify-content: flex-end;
             margin-left: 3px;
-          
         }
-        &__total{
-        
-            color: #F64D33;
+        &__total {
+            color: $colorWhite;
             font-weight: 100;
             font-size: 20px;
             margin-left: 3px;
             margin-bottom: 5px;
-               
-            &--number{
+            &--number {
                 margin-left: 5px;
                 font-size: 20px;
-                color: #d3d0d0;
+                color: $colorWhite;
             }
-        
         }
-        
-    
     }
-
-   
+    
     .shopping {
         display: flex;
         align-items: center;
         justify-content: space-between;
-       
-        background: #ffffff31;
+        background: $lightGray;
         border-radius: 10px;
         padding: 20px 35px 20px 20px;
-         margin: 10px 0em 10px 0;
-         
-
+        margin: 10px 0em 10px 0;
         &__image {
             width: 90px;
             margin: 0px 5px 0px 0px;
         }
-
-        &__info{
-            color: #FFFFFF;
+        &__info {
+            color: $colorWhite;
             font-size: 14px;
         }
-
-
         &__name {
             font-weight: 100;
             font-size: 15px;
-            color: #FFFFFF;
+            color:$colorWhite;
             width: 250px;
             padding-left: 50px;
-            
         }
-        &__counter{
+        &__counter {
             font-size: 14px;
         }
         &__delete {
-
             border: 0;
             border-radius: 5px;
             -webkit-box-shadow: 0 2px 4px #00000033;
             box-shadow: 0 2px 4px #00000033;
             font-weight: 200;
-            background: #FFFFFF;
-            color: #F64D33;
+            background: $colorWhite;
+            color: $colorOrange;
             text-align: center;
             width: 80px;
             height: 28px;
             cursor: pointer;
-
-                 &:hover {
-                    background: #d3d0d0;
-                    }
+            &:hover {
+                background: $detectDeleteBtn;
             }
+        }
     }
-
+    
     .item {
-        
         margin-top: 15px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
-
-
+    
     .data {
-        
         &__subtitle {
-            color: #FFFFFF;
-
-
+            color: $colorWhite;
         }
         &__label {
             font-size: 16px;
-           
             display: flex;
-            color: $colorBlack;
+            color: $colorWhite;
             font-weight: 300;
             font-size: 16px;
             letter-spacing: 1px;
-           
-           
-
         }
         &__input {
-          
-         	justify-content: flex-start;
-        	background-color: #eee;
-	        border: none;
+            justify-content: flex-start;
+            background-color: $colorWhite;
+            border: none;
             border-radius: 5px;
-	        padding: 12px 0px;
-	        margin-top: 7px;
-	        width: 500px;
+            padding: 12px 0px;
+            margin-top: 7px;
+            width: 500px;
         }
-        
     }
-    .check{
+    
+    .check {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 25;
     }
-
+    
     .checkout__submit {
         margin-bottom: 20px;
         border: 0;
@@ -176,24 +153,21 @@ $colorBlack: #FFFFFF;
         -webkit-box-shadow: 0 2px 4px #00000033;
         box-shadow: 0 2px 4px #00000033;
         font-weight: 200;
-        background: #253F5D;
-        color: #FFFFFF;
+        background: $azulBtn;
+        color: $colorWhite;
         text-align: center;
         width: 300px;
         height: 38px;
         cursor: pointer;
-    
         &:hover {
-            background: #b87e77;
-            }
+            background: $colorDetectedBtn;
+        }
     }
-
-
-       .character{
-           display: flex;
-           justify-content: flex-end;
-           position: absolute;
-           top: 265px; 
-           left: 670px;
-       }
     
+    .character {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 265px;
+        left: 670px;
+    }

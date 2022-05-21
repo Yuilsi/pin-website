@@ -90,9 +90,8 @@ onAuthStateChanged(auth, async (user) => {
 
   });
 
-
  
- /*  emailjs.sendForm(service_id, template_id, myform[0])
+ /*  email.sendForm(service_id, template_id, myform[0])
   .then(() => {
       
       document.querySelector('#loaders').appendChild(check);

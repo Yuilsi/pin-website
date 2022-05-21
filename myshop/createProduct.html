@@ -8,40 +8,42 @@
     <link rel="stylesheet" type="text/css" href="./css/createProducts.scss">
 </head>
 <body>
+    
     <section>
-        <div class="imgBx"><img src="./src/scripts/styles/images/loginImage.png"></div>
-        <div class="contentBx">
-            <div class="formBx">
-                <h2>Anadir productos</h2>
-                <form  id="createProductForm">
-                    <div class="inputBx">
+        <div class="container-image"><img class="image" src="./src/scripts/styles/images/loginImage.png"></div>
+        <div class="container-form">
+            <div class="form">
+                <h2 class="form__title">Anadir productos</h2>
+                <form class="form__items" id="createProductForm">
+                    <div class="form__item">
                         <span>Nombre del producto</span>
                         <input type="text" name="name">
                     </div>
-                    <div class="inputBx">
+                    <div class="form__item">
                         <span>Precio</span>
                         <input type="number" name="price">
                     </div>
-                    <div class="inputBx">
-                        <span>Categoría</span>
+                    <div class="form__item">
+                        <span class="form__category">Categoría</span>
+    
                         <select name="category">
-                            <option value="Cuadrados">cuadrados</option>
-                            <option value="Plasticos">plasticos</option>
-                            <option value="Metalicos">metalicos</option>
-                        </select>
+                                        <option value="Cuadrados">cuadrados</option>
+                                        <option value="Plasticos">plasticos</option>
+                                        <option value="Metalicos">metalicos</option>
+                                    </select>
+    
                     </div>
-                    
-                    <div class="loadImage">
-                        <input  class="load" type="file" name="images" >
-                    </div>  
-                    <div class="inputBx">
+                    <div class="form__item">
+                        <input type="file" name="images">
+                    </div>
+                    <div class="form__item">
                         <span>Descripción</span>
                         <textarea name="description" id="" cols="30" rows="10"></textarea>
-                    </div>  
-                    <div class="inputBx">
+                    </div>
+                    <div class="form__item">
                         <input type="submit" value="crear producto">
-                 </div>
-                 
+                    </div>
+    
                 </form>
             </div>
         </div>

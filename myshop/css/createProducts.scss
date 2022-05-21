@@ -1,3 +1,4 @@
+/* General parameters for deleting default properties */
 * {
     font-family: 'Karla', sans-serif;
     padding: 0;
@@ -7,154 +8,136 @@
     box-sizing: border-box;
 }
 
+/* Variables */
 $colorOrange:#F64D33;
-$colorBlue: #131313;
-$colorBlack: #FFFFFF;
+$colorBlue: #131B23;
+$colorWhite: #FFFFFF;
+$colorDetectedBtn:#fa614a;
+$tablets: "(max-width: 768px)";
+//-------------------------------------------
 
 body {
-    background: $colorBlue;
- /*    background: #181818;
-    color: #fff;
-    line-height: 1.6;
-    padding: 0 1.5em; */
+	background: $colorBlue;
+}
+
+section {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.container-image {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	.image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 660px;
+		object-fit: cover;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		/* background: linear-gradient(225deg, #F64D33, $colorBlue); */
+		z-index: 2;
+		mix-blend-mode: screen;
+	}
+}
+
+.container-form {
+	display: flex;
+	width: 50%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 600px;
+	.form {
+		width: 50%;
+		&__title {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			color: $colorOrange;
+			font-weight: 1.5em;
+			margin-bottom: 20px;
+			display: inline-block
+		}
+		&__item {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+span {
+	font-size: 16px;
+	margin-bottom: 5px;
+	display: inline-block;
+	color: $colorWhite;
+	font-weight: 300;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+input {
+	width: 100%;
+	padding: 10px 20px;
+	outline: none;
+	font-weight: 400;
+	border: 1px solid $colorWhite;
+	background: $colorWhite;
+	font-size: 16px;
+	/*  letter-spacing: 1px; */
+	color: $colorBlue;
+	border-radius: 10px;
+	&[type="submit"] {
+		background: $colorOrange;
+		color: $colorWhite;
+		outline: none;
+		border: none;
+		font-weight: 500;
+		cursor: pointer;
+		:hover {
+			background: $colorDetectedBtn;
+		}
+	}
+}
+
+textarea {
+	border-radius: 10px;
+}
+
+@media #{$tablets} {
+	.container-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.container-form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.form {
+		width: 100%;
+		padding: 40px;
+		background: #131b2371;
+		margin: 50px;
+		border-radius: 10;
+	}
 }
 
 
-section
-{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-section .imgBx {
-position: relative;
-width: 50%;
-height: 100%;
-}
-section .imgBx:before {
-content: '';
-position: absolute;
-width: 100%;
-height: 100%;
-/* background: linear-gradient(225deg, #F64D33, $colorBlue); */
-z-index: 2;
-mix-blend-mode:screen;
-}
 
-section .imgBx img {
-    position: absolute;
-    top: 0;
-    left: 0;
-   width: 100%;
-   height: 660px;
-    object-fit: cover;
-   }
 
-   section .contentBx {
-    display: flex;
-    width: 50%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 600px;
-}
-section .contentBx .formBx{
-    width: 50%;
-}
 
-section .contentBx .formBx h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: $colorOrange;
-    font-weight: 1.5em;
-    margin-bottom: 20px;
-    display: inline-block }
-
-    section .contentBx .formBx .inputBx {
-        margin-bottom: 20px;
-    }
-    section .contentBx .formBx .inputBx span {
-       font-size: 16px;
-       margin-bottom: 5px;
-       display: inline-block;
-       color: $colorBlack;
-       font-weight: 300;
-       font-size: 16px;
-       letter-spacing: 1px;
-    }
-    
-    section .contentBx .formBx .inputBx input {
-    
-    width: 100%;
-    padding: 10px 20px;
-    outline: none;
-    font-weight: 400;
-   border: 1px solid #ffffff; 
-    background: #FFFFFF;
-    font-size:16px;
-   /*  letter-spacing: 1px; */
-    color:#131313;
-    
-    border-radius: 10px;
-    }
-
-    section .contentBx .formBx .inputBx input[type="submit"]{
-        background: $colorOrange;
-        color: $colorBlack;
-        outline: none;
-        border: none;
-        font-weight: 500;
-        cursor: pointer;
-
-        
-    }
-    section .contentBx .formBx .inputBx input[type="submit"]:hover {
-        background: rgb(240, 135, 135);
-        }
-
-        section .contentBx .formBx .remember {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            color: $colorBlack;
-            font-weight: 400;
-            font-size: 14px;
-        }
-
-        
-         @media (max-width: 768px){
-            section .imgBx {
-                position: absolute;
-                top:0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-            section .contentBx {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-            }
-            section .contentBx .formBx {
-                width: 100%;
-                padding: 40px;
-                background: rgb(255 255 255 / 0.9);
-                margin: 50px;
-                border-radius: 10;
-            }
-            section .contentBx .formBx h3 {
-                color: #607d8b;
-                text-align: center;
-                margin: 30px 0 10px;
-                font-weight: 500;
-        
-            }
-        }
-
-        textarea {
-            border-radius: 10px;
-        }

@@ -1,3 +1,4 @@
+/* Variables */
 * {
   font-family: 'Karla', sans-serif;
   padding: 0;
@@ -16,7 +17,7 @@ header {
 }
 
 body {
-  background: #010A13;
+  background: #131B23;
   margin: 2px 30px 0 30px;
 }
 
@@ -51,7 +52,7 @@ body {
 }
 
 .product__name {
-  color: #010A13;
+  color: #131B23;
   font-weight: 500;
   color: #F64D33;
   font-weight: bold;
@@ -64,7 +65,7 @@ body {
   display: flex;
   margin-top: 3px;
   margin-bottom: 10px;
-  color: #010A13;
+  color: #131B23;
   font-size: 1.125em;
   font-weight: bold;
   color: #FFFFFF;
@@ -75,7 +76,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 5px;
-  color: #010A13;
+  color: #131B23;
   font-weight: 300;
   font-size: 0.8em;
   color: #FFFFFF;
@@ -103,11 +104,11 @@ body {
 }
 
 .product__cart:hover {
-  background: #b87e77;
+  background: #fa614a;
 }
 
 .loader {
-  border: 16px solid #f3f3f3;
+  border: 16px solid #FFFFFF;
   /* Light grey */
   border-top: 16px solid #3498db;
   /* Blue */
@@ -164,10 +165,10 @@ body {
 select {
   height: 40px;
   padding-left: 10px;
-  border: solid #010A13 1px;
+  border: solid #131B23 1px;
   border-radius: 5px;
   font-weight: 250;
-  color: #010A13;
+  color: #131B23;
   cursor: pointer;
   font-size: 1em;
 }
@@ -176,27 +177,13 @@ select option {
   font-size: 15px;
 }
 
-@media all and (max-width: 420px) {
+@media (max-width: 420px) {
   html, body {
     margin-left: 0px;
     margin-right: 0px;
   }
   section {
     padding: 20px 0px;
-  }
-  section__logo, section__list, section nav {
-    display: none;
-  }
-  section__mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  section__mobile * {
-    border: none;
-    background: none;
   }
   .shop {
     margin-top: 10px;
@@ -207,7 +194,7 @@ select option {
   }
   .shop__tittle {
     font-weight: 600;
-    color: #010A13;
+    color: #131B23;
     font-size: 1em;
     margin-bottom: 5px;
   }
@@ -216,10 +203,10 @@ select option {
   }
   .shop__select {
     height: 30px;
-    border: solid #010A13 1px;
+    border: solid #131B23 1px;
     border-radius: 5px;
     font-weight: 500;
-    color: #010A13;
+    color: #131B23;
     cursor: pointer;
     font-size: 1em;
   }
@@ -239,7 +226,7 @@ select option {
   .product {
     width: 250px;
     display: block;
-    border: solid #010A13 1px;
+    border: solid #131B23 1px;
     border-radius: 20px;
     margin-bottom: 70px;
   }
@@ -254,37 +241,21 @@ select option {
   }
   .product__name {
     margin: 3px 0 5px;
-    color: #010A13;
+    color: #131B23;
     font-weight: 500;
     font-size: 1em;
   }
   .product__category {
     margin-bottom: 5px;
-    color: #010A13;
+    color: #131B23;
     font-weight: 400;
     font-size: 0.7em;
   }
   .product__price {
     margin-bottom: 10px;
-    color: #010A13;
+    color: #131B23;
     font-weight: 400;
     font-size: 1em;
-  }
-  .footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-left: 10%;
-  }
-  .footer__tittle {
-    font-size: 1em;
-  }
-  .footer img {
-    width: 14px;
-  }
-  .footer__column {
-    padding-bottom: 20px;
   }
 }
 /*# sourceMappingURL=shop.css.map */

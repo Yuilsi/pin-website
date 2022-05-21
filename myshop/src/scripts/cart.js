@@ -38,29 +38,6 @@ async function removeProduct(productId) {
     loadCart(newCart);
 
 }
-
-/*  async function removeOneProduct(productId) {
-   const reducedCounter = cart.map(product => {
-       return {
-           ...product,
-           counter:product.id === productId ? product.counter - 1 : product.counter
-       };
-   });
-   const newCart= reducedCounter.filter(product => product.counter > 0);
-    
-    cart = newCart;
-
-    if (userLogged) {
-        await createFirebaseCart(db, userLogged.uid, newCart);
-    }
-
-    addProductToCart(newCart);
-
-    cartSection.innerHTML = "";
-
-    loadCart(newCart);
-
-} */
  
 function renderProduct(product) {
     const productCart = document.createElement("li");

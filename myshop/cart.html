@@ -12,93 +12,90 @@
     <header>
         <div class="container__menu">
             <div class="logo">
-                <a href="./index.html" >
+                <a href="./index.html">
                     <img src="./img/logo.png" alt="">
                 </a>
             </div>
             <div class="menu">
                 <button class="bar-btn" id="btn_menu"><img src="./img/icons/menu.png" alt=""></button>
-               
+    
                 <div id="back_menu"></div>
                 <nav id="nav">
                     <h3 class="nav__tittle hamburgerMenu">Menú</h3>
-                <ul class= "menu  active">
-                      
-                    <li>
-                        <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/products.png" alt="">
-                        <a href="./shop.html">Productos</a>  
-                    </li>
-                    <li >
-                         <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/favorite_products.png"  alt="">
-                        <a href="#">Favoritos</a> 
-                    </li>
-                    <li class="hamburgerMenu">
-                        <img  src="./img/icons/Menu-Hamburguesa/Icon/Cart.png" alt="">
-                        <a href="./cart.html">Carrito </a>
-                    </li>
-                    
-                    <li>
-                        <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/help.png" alt="">
-                        <a href="#">Ayuda</a>
-                    </li>
-                </ul>
-                <div class="contentButtons ">
-
-                    <a class="singIN hamburgerMenu" href="./login.html">Iniciar sesión</a>
-                    <a class="singUP hamburgerMenu" href="./login.html" id="signup">Registrarse</a>
-                </div>
-            </nav>   
+                    <ul class="menu  active">
+    
+                        <li>
+                            <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/products.png" alt="">
+                            <a href="./shop.html">Productos</a>
+                        </li>
+                        <li>
+                            <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/favorite_products.png" alt="">
+                            <a href="#">Favoritos</a>
+                        </li>
+                        <li class="hamburgerMenu">
+                            <img src="./img/icons/Menu-Hamburguesa/Icon/Cart.png" alt="">
+                            <a href="./cart.html">Carrito </a>
+                        </li>
+    
+                        <li>
+                            <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/help.png" alt="">
+                            <a href="#">Ayuda</a>
+                        </li>
+                    </ul>
+                    <div class="contentButtons ">
+    
+                        <a class="singIN hamburgerMenu" href="./login.html">Iniciar sesión</a>
+                        <a class="singUP hamburgerMenu" href="./login.html" id="signup">Registrarse</a>
+                    </div>
+                </nav>
             </div>
         </div>
-        <ul class= "menuIcons flex align-items-center" >
-           <li class="menu__item">
-               <button><img src="./img/icons/loupe.png"/></button>
-           </li>
-           <li class="menu__item">
-               <a href="./cart.html"><img src="./img/icons/shopping_cart.png"/></a>
-           </li>
-           <li class="menu__item">
-               <button id="open"><img src="./img/login.png"/></button>
-           </li>
-        </ul>    
+        <ul class="menuIcons flex align-items-center">
+            <li class="menu__item">
+                <button><img src="./img/icons/loupe.png"/></button>
+            </li>
+            <li class="menu__item">
+                <a href="./cart.html"><img src="./img/icons/shopping_cart.png" /></a>
+            </li>
+            <li class="menu__item">
+                <button id="open"><img src="./img/login.png"/></button>
+            </li>
+        </ul>
         </nav>
-    </div>
+        </div>
     </header>
-   
-
-        <!---------------------VENTANA MODAL------------------------>
-      <div id="modal_container" class="modal-container" >
+    
+    
+    <!---------------------VENTANA MODAL------------------------>
+    <div id="modal_container" class="modal-container">
         <div class="modal" id="windous">
-
-          <div>
-              <a href="./login.html" class="button__modal button__modal--login" id="logIn">Iniciar sesión</a>
-              <h4>¿Eres nuevo?</h4>
-              <a href="./login.html" class="button__modal button__modal--signUp" id="signup">Registrarse</a>
-              <div class="arrow up"></div>
+    
+            <div>
+                <a href="./login.html" class="button__modal button__modal--login" id="logIn">Iniciar sesión</a>
+                <h4>¿Eres nuevo?</h4>
+                <a href="./login.html" class="button__modal button__modal--signUp" id="signup">Registrarse</a>
+                <div class="arrow up"></div>
             </div>
         </div>
-      </div>
-   
-   
-    <!----------------CART-----------------> 
-  
-
+    </div>
+    
+    
+    <!----------------CART----------------->
+    
+    
     <section class="container">
-            <h2 class="container__title">Tus compras</h2>
-            <ul class="cart" id="cart"></ul>
-            <div class="total">
-                <div class="total__first">
-                    <h2 class="total__title">Total:</h2>
-                    <h2 class="total__total" id="totalSection">0</h2>
-                </div>
-
-
-                
-                <div class="check">
-                    <a class="total__checkout" id="checkoutBtn">Comprar</a>
-                </div>
+        <h2 class="container__title">Tus compras</h2>
+        <ul class="cart" id="cart"></ul>
+        <div class="total">
+            <div class="total__first">
+                <h2 class="total__title">Total:</h2>
+                <h2 class="total__total" id="totalSection">0</h2>
             </div>
-        </section>
+            <div class="check">
+                <a class="total__checkout" id="checkoutBtn">Comprar</a>
+            </div>
+        </div>
+    </section>
 
     <script src="./src/scripts/cart.js" type="module"></script>
     <script src="./src/scripts/index.js" type="module"></script>
