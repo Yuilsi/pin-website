@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
     }
     const userCreated= await createUser(auth,newUser);
    await addUserToDatabase(db,userCreated.uid,newUser);
-    location.href= "/index.html"
+    location.href= "index.html"
   console.log(userCreated);
   });
    //--------------------------LOGIN--------------------------------
@@ -42,9 +42,9 @@ window.addEventListener("load", () => {
       const userInfo = await getUser(db,user);
       console.log(userInfo.data().isAdmin);
       if(userInfo.data().isAdmin){
-        location.href= "/createProduct.html";
+        location.href= "createProduct.html";
       }else{
-        location.href= "/index.html"
+        location.href= "index.html"
       }
     } catch(e) {
       console.error(e);
