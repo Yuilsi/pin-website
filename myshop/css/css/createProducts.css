@@ -1,0 +1,155 @@
+/* General parameters for deleting default properties */
+* {
+  font-family: 'Karla', sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Variables */
+body {
+  background: #131B23;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-image {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.container-image .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 660px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container-image:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(225deg, #F64D33, $colorBlue); */
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+.container-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 600px;
+}
+
+.container-form .form {
+  width: 50%;
+}
+
+.container-form .form__title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #F64D33;
+  font-weight: 1.5em;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.container-form .form__item {
+  margin-bottom: 20px;
+}
+
+span {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #FFFFFF;
+  background: #FFFFFF;
+  font-size: 16px;
+  /*  letter-spacing: 1px; */
+  color: #131B23;
+  border-radius: 10px;
+}
+
+input[type="submit"] {
+  background: #F64D33;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+input[type="submit"] :hover {
+  background: #fa614a;
+}
+
+textarea {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .container-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .container-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .form {
+    width: 100%;
+    padding: 40px;
+    background: #131b2371;
+    margin: 50px;
+    border-radius: 10;
+  }
+}
+/*# sourceMappingURL=createProducts.css.map */
