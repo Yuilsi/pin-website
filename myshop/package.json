@@ -10,7 +10,24 @@
   "author": "yuilsi",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^9.6.11"
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "dat.gui": "^0.7.9",
+    "firebase": "^9.6.11",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "portfinder-sync": "^0.0.2",
+    "raw-loader": "^4.0.2",
+    "style-loader": "^3.3.1",
+    "three": "^0.140.2",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0",
+    "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.5.0",
