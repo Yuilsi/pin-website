@@ -23,7 +23,7 @@ for (let i = 0; i < 4; i++) {
     const img = new THREE.Mesh(geometry,material)
     scene.add(img)
     img.position.set(1, i*1.8)
-    console.log("no te quiero funcionar :p, solo te quiero molestar la vida");
+    console.log(i);
 }
 
 

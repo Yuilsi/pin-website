@@ -430,6 +430,32 @@ ul.show {
   font-size: 18px;
 }
 
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (230px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 230px);
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.grid-item {
+  width: 230px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  background-color: lightgray;
+}
+
+.grid-item:hover {
+  -webkit-filter: opacity(0.9);
+          filter: opacity(0.9);
+}
+
 /*-----------------FOOTER ---------------*/
 .elements {
   display: -webkit-box;

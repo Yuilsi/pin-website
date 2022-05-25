@@ -1,4 +1,3 @@
-/* MODAL LOGIN AND REGISTER */
 const open = document.getElementById('open');
 const modal_container = document.getElementById('modal_container');
 const modalInfo = document.getElementById('windous');
@@ -35,11 +34,10 @@ document.addEventListener('click', (event) => {
     }
 });
 
-
-/* MENU HAMBURGER */
-
 document.getElementById("btn_menu").addEventListener("click", mostrar_menu);
+
 document.getElementById("back_menu").addEventListener("click", ocultar_menu);
+
 nav = document.getElementById("nav");
 background_menu = document.getElementById("back_menu");
 
@@ -52,56 +50,3 @@ function ocultar_menu(){
     nav.style.right = "-250px";
     background_menu.style.display = "none";
 }
-
-
-/* CAROUSEL */
-
-window.addEventListener('load', function(){       //indica que cuando la pagina cargue va a realizar una funcion
-	 new Glider(document.querySelector('.carousel__list'), {
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		draggable:true,
-		dots: '.carousel__arrows',
-		arrows: {
-			prev: '.carousel__prev',
-			next: '.carousel__next'
-		},
-		responsive: [
-			{
-			  breakpoint: 450,
-			  settings: {
-				// Set to `auto` and provide item width to adjust to viewport
-				slidesToShow: 2,
-				slidesToScroll: 2
-			  }
-			},{
-			  // en tamaños mayores o iguales a 1024px
-			  breakpoint: 800,
-			  settings: {
-				slidesToShow: 5,
-				slidesToScroll: 5
-			  }
-			}
-		]
-	});
-});
-
-
-/* GRID OF IMAGES */
-var elem = document.querySelector('.grid-container');
-imagesLoaded(elem, () => {   
-	var msnry = new Masonry( elem, {
-		  // options
-		  itemSelector: '.grid-item',
-		  columnWidth: 230, gutter:20, isFitWidth: true
-		});
-})
-
-
-
-
-
-
-
-
-  
