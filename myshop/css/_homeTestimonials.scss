@@ -1,0 +1,16 @@
+
+.testimonials {
+    &__items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px;
+    
+        
+    }
+    &__paragraph{
+      
+        font-size: 18px;
+    }
+}

@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
- <!------------------libreria----------------------------->
+ <!------------------libraries----------------------------->
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-
+ <!------------------style sheet----------------------------->
  <link rel="stylesheet" type="text/css" href="./css/home.scss">
    
 
@@ -73,9 +74,6 @@
                <button id="open"><img src="./img/login.png"/></button>
            </li>
        </ul>
-
-            
-        </nav>
     </div>
     </header>
 
@@ -176,6 +174,16 @@
 
 
     </section>
+    <!-------------------SECTION te--------------->
+    <section class="testimonials">
+        <div class="testimonials__items" data-aos="fade-left">
+            <h1 class="testimonials__title">Testimonios</h1>
+            <p class="testimonials__paragraph">“Considero que su página web está muy bien desarrollada, me encanta cómo enfocan los pines hacia las emociones de las personas y sobre todo el uso que hacen de jergas juveniles para crear ambientes alegres.Gracias a ustedes siempre encuentro algo de que reirme o enamorarme.” </p>
+            <h3 class="testimonials__author">Linda Jermy</h3>
+            <h4 class="testimonials__author-occupation"> Estudiante de  derecho</h4>
+        </div>
+    </section>
+
     <!-------------------FOOTER--------------->
     <footer>
         <div class="elements">
@@ -219,11 +227,14 @@
         </div>
 
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script> 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="./src/scripts/index.js" type="module"></script>
-
    
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 
