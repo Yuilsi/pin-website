@@ -34,6 +34,7 @@
            width: 100px;
            position: absolute;
            background: red;
+           z-index: 100;
         }
         #container{
             width:100vw;
@@ -41,6 +42,8 @@
            position: fixed;
            top:0;
            left:0;
+           z-index: -1;
+           pointer-events: none;
         }
 
 
@@ -50,11 +53,21 @@
     
 <body>
     <div id="wrap">
-        <div class="n"></div>
-        <div class="n n1"></div>
-        <div class="n n2"></div>
-        <div class="n n3"></div>
-        <div class="n n4"></div>
+        <div class="n">
+            <img src="./static/photographs/0.png" width="60" alt="">
+        </div>
+        <div class="n n1">
+            <img src="./static/photographs/1.png" width="60" alt="">
+        </div>
+        <div class="n n2">
+            <img src="./static/photographs/2.png"  width="60" alt="">
+        </div>
+        <div class="n n3">
+            <img src="./static/photographs/3.png" width="60" alt="">
+        </div>
+        <div class="n n4">
+           <!--  <img src="./static/photographs/4.png" alt=""> -->
+        </div>
     </div>
     
     <div id="block"></div>

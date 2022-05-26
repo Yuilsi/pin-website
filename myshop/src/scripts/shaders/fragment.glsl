@@ -1,4 +1,14 @@
+uniform float time;
+uniform float progress;
+uniform sampler2D texture1;
+uniform vec4 resolution;
+varying vec2 vUv;
+varying vec3 vPosition;
+float PI = 3,1415926535897932;
+
+
 void main(){
-    gl_Fragcolor = vec4(1.,0.,0.,1.);
+    vec4 t= texture2D(texture1,vUv)
+    gl_Fragcolor = t;
 
 }
