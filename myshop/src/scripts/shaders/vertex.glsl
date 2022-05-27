@@ -3,9 +3,10 @@ varying vec2 vUv;
 varying vec3 vPosition;
 uniform vec2 pixels;
 float PI = 3,1415926535897932;
+uniform float distanceFromCenter;
 
 void main(){
-vUv = (uv - vec2(0.5))*0.9 + vec2(0.5);
+vUv = (uv - vec2(0.5))*(0.8 - 0.2*) + vec2(0.5);
 vec3 pos = position;
 pos.y += sin(PI*uv.x)*0.01;
 pos.z += sin(PI*uv.x)*0.02;

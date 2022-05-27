@@ -30,6 +30,7 @@ function raf (){
         let scale = 1 + 0.1*o.dist;
         sketch.meshes[i].position.y = i*1.2 + position*1.2
         sketch.meshes[i].scale.set(scale,scale,scale)
+        sketch.meshes[i].material.uniforms.distanceFromCenter.value = o.dist;
 
    
 
@@ -38,7 +39,7 @@ function raf (){
     rounded = Math.round(position);
     
     let diff= (rounded - position);
-    position += Math.sign(diff)*Math.pow(Math.abs(diff),0.7)*0.015;
+    position += Math.sign(diff)*Math.pow(Math.abs(diff),0.7)*0.035;
     /* block.style.transform = `translate(0,${position*100 + 50}px)` */
     wrap.style.transform = `translate(0,${-position*100 + 50}px)`;
    /*  sketch.meshes.forEach((mesh,i)=>{
