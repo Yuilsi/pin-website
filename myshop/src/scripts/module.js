@@ -129,6 +129,7 @@ export default class Sketch {
             },
             side: THREE.DoubleSide,
             uniforms: {
+
                 time: { type: "f", value: 0 },
                 distanceFromCenter: {type: "f", value: 0},
                 texture1: { type: "t", value: null },
@@ -137,7 +138,7 @@ export default class Sketch {
                     value: new THREE.Vector2(1, 1)
                 }
             },
-
+            transparent:true,
             vertexShader: vertex,
             fragmentShader: fragment
         });
