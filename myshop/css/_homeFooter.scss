@@ -1,5 +1,13 @@
 /*-----------------FOOTER ---------------*/
+/* Variables */
+$colorOrange:#F64D33;
+$colorBlue: #131B23;
+$colorWhite: #FFFFFF;
+$lightGray: #ffffff31;
+$colorDetectedBtn:#fa614a;
+
 .elements {
+ 
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -30,4 +38,21 @@
     &__box {
       margin-top: 5px;
     }
+  }
+
+  $phone:"(max-width: 420px)";
+
+  @media #{$phone}{
+    .elements {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__box {
+     max-width: 250px;
+     padding-bottom: 20px;
+     margin-bottom: 20px;
+     
+      }
+    }
+
   }

@@ -1,11 +1,16 @@
 @charset "UTF-8";
+html {
+  width: 100%;
+}
+
 header {
   width: 100%;
   height: 74px;
-  position: absolute;
+  position: fixed;
   z-index: 4;
   padding: 10px;
   color: aliceblue;
+  background: #FFFFFF;
 }
 
 .nav {
@@ -36,7 +41,7 @@ header {
 
 .logo img {
   margin-left: 5px;
-  margin-top: 20px;
+  margin-top: 8px;
   margin-right: 10px;
 }
 
@@ -51,13 +56,13 @@ header {
 
 .menu ul li {
   margin: 0px 20px;
-  margin-top: 18px;
+  margin-top: 10px;
   margin-left: 36px;
 }
 
 .menu ul li a {
   font-size: 18px;
-  color: #fff;
+  color: #010A13;
 }
 
 .menu ul li a .active, .menu ul li a:hover {
@@ -86,7 +91,7 @@ header {
   background-color: transparent;
   border: none;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-top: 9px;
   cursor: pointer;
   display: none;
 }
@@ -97,7 +102,7 @@ ul.show {
 
 .menuIcons {
   position: absolute;
-  top: 30px;
+  top: 22px;
   left: 1100px;
 }
 
@@ -124,7 +129,7 @@ ul.show {
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 390px) {
   .menu nav {
     background-color: #010A13;
     position: fixed;
@@ -183,9 +188,15 @@ ul.show {
     display: flex;
   }
   .menu #btn_menu {
+    position: absolute;
+    top: 30px;
+    left: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -265,7 +276,7 @@ ul.show {
             align-items: center;
   }
   .logo img {
-    margin-left: 5px;
+    margin-left: 30px;
     margin-top: 20px;
     margin-right: 10px;
   }
@@ -328,11 +339,11 @@ ul.show {
   z-index: 5;
   display: block;
   width: 30px;
-  height: 500px;
+  height: 30px;
   border: none;
   top: calc(50% - 12px);
   /*alineación de botones verticalmente*/
-  line-height: 30px;
+  line-height: 1000px;
   color: #F64D33;
   opacity: 40%;
   cursor: pointer;
@@ -349,7 +360,7 @@ ul.show {
 }
 
 .carousel__next {
-  right: -30px;
+  right: -10px;
 }
 
 .carousel__list {
@@ -409,6 +420,22 @@ ul.show {
   font-weight: 400;
 }
 
+@media (max-width: 420px) {
+  .quality {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+
+/* Variables */
 .testimonials__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -423,11 +450,17 @@ ul.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px;
+  padding: 15px 30px;
+}
+
+.testimonials__title {
+  font-size: 1.3em;
 }
 
 .testimonials__paragraph {
-  font-size: 18px;
+  font-size: 17px;
+  text-align: center;
+  font-style: italic;
 }
 
 .grid-container {
@@ -457,6 +490,7 @@ ul.show {
 }
 
 /*-----------------FOOTER ---------------*/
+/* Variables */
 .elements {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,6 +523,21 @@ ul.show {
 
 .elements__box {
   margin-top: 5px;
+}
+
+@media (max-width: 420px) {
+  .elements {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .elements__box {
+    max-width: 250px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 /* ventana modal */
@@ -661,46 +710,5 @@ p {
 
 body {
   background-color: #010A13;
-}
-
-@media (max-width: 768px) {
-  body {
-    overflow: hidden;
-  }
-  .logo {
-    margin-left: 30px;
-  }
-  .bar-btn {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 25px;
-  }
-  nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding: top 25px;
-  }
-  .menu__item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 92vh;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: none;
-  }
 }
 /*# sourceMappingURL=home.css.map */

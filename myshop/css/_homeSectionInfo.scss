@@ -25,3 +25,14 @@
           font-weight: 400;
         }
   }
+
+  $phone:"(max-width: 420px)";
+
+  @media #{$phone}{
+    .quality {
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      
+    }
+  }

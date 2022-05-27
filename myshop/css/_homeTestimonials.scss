@@ -1,16 +1,30 @@
-
+/* Variables */
+$colorOrange:#F64D33;
+$colorBlue: #131B23;
+$colorWhite: #FFFFFF;
+$lightGray: #ffffff31;
+$colorDetectedBtn:#fa614a;
 .testimonials {
+   
     &__items{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 50px;
+        padding: 15px 30px; 
     
         
     }
+
+    &__title{
+        font-size: 1.3em;
+    }
     &__paragraph{
       
-        font-size: 18px;
+        font-size: 17px;
+        text-align: center;
+        font-style: italic;
     }
+
+   
 }

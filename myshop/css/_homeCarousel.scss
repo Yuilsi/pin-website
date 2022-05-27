@@ -23,7 +23,7 @@
     border: none;
     top: calc(50% - 12px);
     /*alineación de botones verticalmente*/
-    line-height: 30px;
+    line-height: 1000px;
     color: #F64D33;
     opacity: 40%;
     cursor: pointer;
@@ -40,7 +40,7 @@
   }
   
   .carousel__next {
-    right: -30px;
+    right: -10px;
   }
   
   .carousel__list {
