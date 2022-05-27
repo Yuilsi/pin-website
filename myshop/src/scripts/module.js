@@ -6,7 +6,6 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 import { TimelineMax } from "gsap";
 
-//finding the bug
 export default class Sketch {
     constructor(options) {
         this.scene = new THREE.Scene();
@@ -22,7 +21,6 @@ export default class Sketch {
         this.renderer.setClearColor(0xeeeeee, 1);
         this.renderer.physicallyCorrectLights = true;
         this.renderer.outputEncoding = THREE.sRGBEncoding;
-        
 
         this.container.appendChild(this.renderer.domElement);
 
@@ -139,7 +137,7 @@ export default class Sketch {
                     value: new THREE.Vector2(1, 1)
                 }
             },
-            transparent: true,
+
             vertexShader: vertex,
             fragmentShader: fragment
         });

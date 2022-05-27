@@ -1,77 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             overflow: hidden;
         }
-        .n{
+
+        .n {
             position: absolute;
             top: 100px;
             width: 200px;
             height: 10px;
             background: #000;
         }
-        .n1{  
+
+        .n1 {
             top: 200px;
         }
-        .n2{  
+
+        .n2 {
             top: 300px;
         }
-        .n3{  
+
+        .n3 {
             top: 400px;
         }
-        .n4{  
+
+        .n4 {
             top: 500px;
         }
 
-        #block{
-           height: 100px; 
-           width: 100px;
-           position: absolute;
-           background: red;
-           z-index: 100;
+        #block {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            background: red;
+            z-index: 100;
         }
-        #container{
-            width:100vw;
-            height:100wh;
-           position: fixed;
-           top:0;
-           left:0;
-           z-index: -1;
-           pointer-events: none;
-        }
-        ul{
+
+        #container {
+            width: 100vw;
+            height: 100vh;
             position: fixed;
             top: 0;
-            right: 0;
-            z-index: 100;
-            border: 1px solid #000;
-            width: 200px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
         }
-
-
-
     </style>
 
 </head>
-    
+
 <body>
-    <ul class="nav">
-        <li>111</li>
-        <li>22</li>
-        <li>33</li>
-        <li>44</li>
-        <li>555</li>
-    </ul>
     <div id="wrap">
         <div class="n">
             <img src="./static/photographs/0.png" width="60" alt="">
@@ -80,20 +65,20 @@
             <img src="./static/photographs/1.png" width="60" alt="">
         </div>
         <div class="n n2">
-            <img src="./static/photographs/2.png"  width="60" alt="">
+            <img src="./static/photographs/2.png" width="60" alt="">
         </div>
         <div class="n n3">
             <img src="./static/photographs/3.png" width="60" alt="">
         </div>
-        <div class="n n4">
-           <!--  <img src="./static/photographs/4.png" alt=""> -->
-        </div>
+
+
     </div>
-    
+
     <div id="block"></div>
     <div id="container"></div>
-    
-    
+
+
     <script src="./src/scripts/scrollImages.js" type="module"></script>
 </body>
+
 </html>
