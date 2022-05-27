@@ -6,6 +6,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 import { TimelineMax } from "gsap";
 
+//finding the bug
 export default class Sketch {
     constructor(options) {
         this.scene = new THREE.Scene();
