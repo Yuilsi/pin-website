@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./*.html --no-cache",
+    "dev": "parcel ./myshop/*.html --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "yuilsi",
