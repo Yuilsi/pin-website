@@ -10,60 +10,52 @@
 </head>
 <body>
     <header>
-        <div class="container__menu">
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="./img/logo.png" alt="">
+        <nav class="nav flex">
+            <div class="flex align-items-center">
+                <a href="#" class="logo">
+                    <img  class="logo__write" src="./img/logo.png" >
+                    <img class="logo__orange" src="./img/logo_orange.png" >
                 </a>
+          
+
+                <ul class= "menu flex align-items-center active">
+                    <li class="menu__item">
+                        <a href="./index.html">Inicio</a>  
+                      </li>
+                    <li class="menu__item">
+                      <a href="./shop.html">Productos</a>  
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">Favoritos</a> 
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">Ayuda</a>
+                    </li>
+                </ul>
             </div>
-            <div class="menu">
-                <button class="bar-btn" id="btn_menu"><img src="./img/icons/menu.png" alt=""></button>
-    
-                <div id="back_menu"></div>
-                <nav id="nav">
-                    <h3 class="nav__tittle hamburgerMenu">Menú</h3>
-                    <ul class="menu  active">
-    
-                        <li>
-                            <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/products.png" alt="">
-                            <a href="./shop.html">Productos</a>
-                        </li>
-                        <li>
-                            <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/favorite_products.png" alt="">
-                            <a href="#">Favoritos</a>
-                        </li>
-                        <li class="hamburgerMenu">
-                            <img src="./img/icons/Menu-Hamburguesa/Icon/Cart.png" alt="">
-                            <a href="./cart.html">Carrito </a>
-                        </li>
-    
-                        <li>
-                            <img class="hamburgerMenu" src="./img/icons/Menu-Hamburguesa/help.png" alt="">
-                            <a href="#">Ayuda</a>
-                        </li>
-                    </ul>
-                    <div class="contentButtons ">
-    
-                        <a class="singIN hamburgerMenu" href="./login.html">Iniciar sesión</a>
-                        <a class="singUP hamburgerMenu" href="./login.html" id="signup">Registrarse</a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <ul class="menuIcons flex align-items-center">
-            <li class="menu__item">
-                <button><img src="./img/icons/loupe.png"/></button>
-            </li>
-            <li class="menu__item">
-                <a href="./cart.html"><img src="./img/icons/shopping_cart.png" /></a>
-            </li>
-            <li class="menu__item">
-                <button id="open"><img src="./img/login.png"/></button>
-            </li>
-        </ul>
+             <ul class= "menu flex align-items-center">
+                <li class="menu__item">
+                    <button><img src="./img/icons/loupe.png"/></button>
+                </li>
+                <li class="menu__item">
+                    <a href="./cart.html"><img src="./img/icons/shopping_cart.png"/></a>
+                </li>
+                <li class="menu__item">
+                    <button id="open"><img src="./img/login.png"/></button>
+                </li>
+            </ul>   
         </nav>
+
+        <div class="header__responsive inactive">
+            
+            <button><img src="./img/icons/menu.png"></button>
+            <a href="#" class="logo">
+                <img  class="logo__write" src="./img/logo.png" >
+                <img class="logo__orange" src="./img/logo_orange.png" >
+            </a>    
         </div>
-    </header>
+
+    </header> 
     
     
     <!---------------------VENTANA MODAL------------------------>
