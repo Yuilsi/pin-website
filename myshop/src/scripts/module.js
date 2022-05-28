@@ -18,7 +18,7 @@ export default class Sketch {
         });
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize(this.width, this.height);
-        this.renderer.setClearColor(0xeeeeee, 1);
+        this.renderer.setClearColor(0x121b23, 1);
         this.renderer.physicallyCorrectLights = true;
         this.renderer.outputEncoding = THREE.sRGBEncoding;
 
@@ -50,7 +50,7 @@ export default class Sketch {
     }
 
     handleImages() {
-        let images = [...document.querySelectorAll('img')];
+        let images = [...document.querySelectorAll('.imgDisplay')];
 
         images.forEach((im, i) => {
             let mat = this.material.clone();
