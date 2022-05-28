@@ -75,11 +75,13 @@ header.abajo .logo__write {
 }
 
 .banner__elements {
+  border-radius: 12px;
   margin-top: 2em;
-  margin-left: 23px;
+  margin-left: 81px;
   width: 450px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.151);
   padding: 50px;
+  padding: 20px 50px 50px;
   position: absolute;
   /*el contenido se sobrepone a la pagina*/
   top: 50%;
