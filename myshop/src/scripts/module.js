@@ -18,7 +18,7 @@ export default class Sketch {
         });
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize(this.width, this.height);
-        this.renderer.setClearColor(0x121b23, 1);
+        this.renderer.setClearColor(0x10a13, 1);        //chance color
         this.renderer.physicallyCorrectLights = true;
         this.renderer.outputEncoding = THREE.sRGBEncoding;
 

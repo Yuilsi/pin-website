@@ -63,11 +63,11 @@ if(attractMode){
 }
 
 raf();
- let navs = [...document.querySelectorAll('li')]
- let nav = document.querySelector('.nav');
+ let insteractions = [...document.querySelectorAll('.interaction__option')] /*interactions y li*/
+ let interaction = document.querySelector('.interaction');
 
  let roots = sketch.groups.map(e=>e.rotation)
- nav.addEventListener('mouseenter', ()=>{
+ interaction.addEventListener('mouseenter', ()=>{
 attractMode=true
 gsap.to(roots,{
     duration: 0.3,
@@ -77,7 +77,7 @@ gsap.to(roots,{
 })
  })
 
- nav.addEventListener('mouseleave', ()=>{
+ interaction.addEventListener('mouseleave', ()=>{
     attractMode=false 
     gsap.to(roots,{
         duration: 0.3,
@@ -87,8 +87,8 @@ gsap.to(roots,{
     }) 
 })
 
-navs.forEach(el, ()=>{
+insteractions.forEach(el, ()=>{
      el.addEventListener('mouseover', (e)=>{
-attractTo = Number(e.target.getAttribute('.data-nav'));
+attractTo = Number(e.target.getAttribute('data-interaction'));
      })
 })
