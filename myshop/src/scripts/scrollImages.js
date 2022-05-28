@@ -10,14 +10,14 @@ let speed = 0;
 let position = 0;
 let rounded = 0;
 let block = document.getElementById('block')
-let wrap = document.getElementById('wrap')
-let elems = [...document.querySelectorAll('.n')];
+let wrap = document.getElementById('base-carousel')
+let elems = [...document.querySelectorAll('.base-carousel__block')];
 window.addEventListener('wheel', (e) => {
     console.log(e);
     speed += e.deltaY * 0.0003;
 })
 
-let objs = Array(4).fill({ dist: 0 });
+let objs = Array(6).fill({ dist: 0 });
 console.log(sketch);
 
 function raf() {

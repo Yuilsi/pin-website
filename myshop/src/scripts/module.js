@@ -49,7 +49,7 @@ export default class Sketch {
     }
 
     handleImages() {
-        let images = [...document.querySelectorAll('.imgDisplay')];
+        let images = [...document.querySelectorAll('.base-carousel__image')];
 
         images.forEach((im, i) => {
             let mat = this.material.clone();
