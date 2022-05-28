@@ -49,13 +49,8 @@ if(attractMode){
 }else{
 
     position += Math.sign(diff) * Math.pow(Math.abs(diff), 0.7) * 0.035;
-    /* block.style.transform = `translate(0,${position*100 + 50}px)` */
     wrap.style.transform = `translate(0,${-position * 100 + 50}px)`;
-    /*  sketch.meshes.forEach((mesh,i)=>{
-         mesh.position.y = i*1.2 + position*1.2
-         mesh.scale.set(i*1.2 +position*1.2)
- 
-     }) */
+   
 }
 
    

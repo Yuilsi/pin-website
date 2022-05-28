@@ -45,7 +45,6 @@ export default class Sketch {
         this.handleImages()
 
 
-        /*  this.addMesh(); */
 
     }
 
@@ -57,7 +56,7 @@ export default class Sketch {
             this.materials.push(mat);
             let group = new THREE.Group()
 
-            /* mat.wireframe= true; */
+         
             console.log(im.src);
             let image = new Image();
             image.src = im.src;
@@ -142,9 +141,7 @@ export default class Sketch {
             vertexShader: vertex,
             fragmentShader: fragment
         });
-        /*    this.geometry = new THREE.PlaneGeometry(1,1,1,1);
-           this.plane = new THREE.Mesh(this.geometry, this.material);
-           this.scene.add(this.plane); */
+       
     }
 
     stop() {
@@ -166,8 +163,7 @@ export default class Sketch {
                 m.uniforms.time.value = this.time;
             })
         }
-        /*   this.renderer.render(this.scene, this.camera );
-          window.requestAnimationFrame(this.render.bind(this)); */
+      
         requestAnimationFrame(this.render.bind(this));
         this.renderer.render(this.scene, this.camera);
     }
